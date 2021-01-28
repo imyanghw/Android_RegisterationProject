@@ -18,6 +18,6 @@ public class RegisterActivity extends AppCompatActivity {
 
         spinner = (Spinner)findViewById(R.id.majorSpinner);
         adapter = ArrayAdapter.createFromResource(this, R.array.major, android.R.layout.simple_spinner_dropdown_item);
-        spinner.setAdapter(adapter);
+        spinner.setAdapter(adapter); //spinner로 전공 목록을 나열
     }
 }

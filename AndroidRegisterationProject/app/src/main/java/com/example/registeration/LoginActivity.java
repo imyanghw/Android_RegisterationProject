@@ -21,6 +21,6 @@ public class LoginActivity extends AppCompatActivity {
                 Intent registerIntent = new Intent(LoginActivity.this, RegisterActivity.class);
                 LoginActivity.this.startActivity(registerIntent);
             }
-        });
+        }); //LoginActivity 화면에서 회원가입 버튼을 누르면 RegisterActivity를 호출
     }
 }
