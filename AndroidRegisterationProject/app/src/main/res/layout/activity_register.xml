@@ -29,13 +29,14 @@
             android:layout_width="280dp"
             android:layout_height="wrap_content"
             android:hint="아이디"
+            android:drawablePadding="5dp"
             android:layout_gravity="center"
             android:padding="10dp"
             android:textColor="#878686"
             android:textColorHint="#878686"
             android:id="@+id/idText"
-            android:drawableStart="@drawable/ic_baseline_person_24"
-            android:drawableLeft="@drawable/ic_baseline_person_24"
+            android:drawableStart="@drawable/id"
+            android:drawableLeft="@drawable/id"
             android:layout_marginTop="50dp"
             android:background="#ffffff"/>
         <EditText
@@ -43,26 +44,29 @@
             android:layout_width="280dp"
             android:layout_height="wrap_content"
             android:hint="비밀번호"
+            android:drawablePadding="5dp"
             android:layout_gravity="center"
             android:padding="10dp"
             android:textColor="#878686"
             android:textColorHint="#878686"
             android:id="@+id/passwordText"
-            android:drawableStart="@drawable/ic_baseline_https_24"
-            android:drawableLeft="@drawable/ic_baseline_https_24"
+            android:drawableStart="@drawable/pw"
+            android:drawableLeft="@drawable/pw"
             android:layout_marginTop="10dp"
             android:background="#ffffff"/>
         <EditText
+            android:inputType="textEmailAddress"
             android:layout_width="280dp"
             android:layout_height="wrap_content"
             android:hint="이메일"
+            android:drawablePadding="5dp"
             android:layout_gravity="center"
             android:padding="10dp"
             android:textColor="#878686"
             android:textColorHint="#878686"
             android:id="@+id/emailText"
-            android:drawableStart="@drawable/ic_baseline_email_24"
-            android:drawableLeft="@drawable/ic_baseline_email_24"
+            android:drawableStart="@drawable/email"
+            android:drawableLeft="@drawable/email"
             android:layout_marginTop="10dp"
             android:background="#ffffff"/>
 
@@ -77,6 +81,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="여성"
+                android:textColor="#878686"
                 android:id="@+id/genderWoman"
                 android:layout_weight="1"
                 android:checked="true"/>
@@ -84,10 +89,15 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="남성"
+                android:textColor="#878686"
                 android:id="@+id/genderMan"
                 android:layout_weight="1"/>
         </RadioGroup>
+
         <Spinner
+            android:entries="@array/major"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
             android:layout_width="280dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
