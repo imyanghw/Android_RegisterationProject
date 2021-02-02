@@ -3,6 +3,8 @@ package com.example.registeration;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -32,7 +34,6 @@ public class RegisterActivity extends AppCompatActivity {
     private String userEmail;
     private AlertDialog dialog;
     private boolean validate = false; //회원 아이디인지 체크
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,7 +87,7 @@ public class RegisterActivity extends AppCompatActivity {
                 if(userID.equals("")) { //체크가 되어있지 않은 상태라면(userID값이 아무런내용이 없다면)
                     AlertDialog.Builder builder = new AlertDialog.Builder(RegisterActivity.this);
                     //아이디가 빈공간일때 예외를 처리해 다시 작성하게끔 해줌
-                    dialog = builder.setMessage("아이디는 빈 칸일 수 없습니다.")
+                    dialog = builder.setMessage("아이디를 입력해주세요.")
                             .setPositiveButton("확인", null)
                             .create();
                     dialog.show();
@@ -167,10 +168,16 @@ public class RegisterActivity extends AppCompatActivity {
                                 AlertDialog.Builder builder = new AlertDialog.Builder(RegisterActivity.this);
                                 //아이디가 빈공간일때 예외를 처리해 다시 작성하게끔 해줌
                                 dialog = builder.setMessage("회원 등록에 성공했습니다.")
-                                        .setPositiveButton("확인", null)
+                                        .setPositiveButton("확인", new DialogInterface.OnClickListener() {
+                                            @Override
+                                            public void onClick(DialogInterface dialog, int which) {
+                                                Intent intent=new Intent(RegisterActivity.this,
+                                                        LoginActivity.class);
+                                                RegisterActivity.this.startActivity(intent);
+                                            } //다이얼로그 메시지 확인을 누르게되면 로그인창으로 이동함
+                                        })
                                         .create();
                                 dialog.show();
-                                finish(); //회원가입 등록창을 닫을 수 있도록 해줌
                             }
                             else {
                                 AlertDialog.Builder builder = new AlertDialog.Builder(RegisterActivity.this);
@@ -188,7 +195,7 @@ public class RegisterActivity extends AppCompatActivity {
                 RegisterRequest registerRequest = new RegisterRequest(userID, userPassword, userGender,
                         userMajor, userEmail, responseListener);
                 RequestQueue queue = Volley.newRequestQueue(RegisterActivity.this);
-                queue.add(registerRequest); //회원가입 버튼이 눌리면 실행됨
+                queue.add(registerRequest); //Volley 라이브러리를 이용해서 실제 서버와 통신을 구현하는 부분
             }
         });
     }

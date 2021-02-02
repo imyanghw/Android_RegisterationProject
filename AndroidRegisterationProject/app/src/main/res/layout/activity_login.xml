@@ -78,10 +78,11 @@
             android:textSize="20dp"
             android:textStyle="bold"
             android:textColor="#ffffff"
-            android:backgroundTint="#27952C"
+            android:backgroundTint="#046B40"
             android:text="로그인"
             android:layout_marginTop="10dp"
-            android:layout_gravity="center" />
+            android:layout_gravity="center"
+            android:id="@+id/loginButton"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -90,7 +91,7 @@
             android:layout_marginTop="10dp"
             android:text="회원가입"
             android:textColor="#878686"
-            android:id="@+id/registerButton" />
+            android:id="@+id/registerButton"/>
     </LinearLayout>
 
 </LinearLayout>

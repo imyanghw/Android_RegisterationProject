@@ -42,7 +42,6 @@
                 android:textColorHint="#878686"
                 android:id="@+id/idText"
                 android:drawableStart="@drawable/id"
-                android:drawableLeft="@drawable/id"
                 android:layout_marginRight="10dp"
                 android:background="#ffffff"/>
             <Button
@@ -69,7 +68,6 @@
             android:textColorHint="#878686"
             android:id="@+id/passwordText"
             android:drawableStart="@drawable/pw"
-            android:drawableLeft="@drawable/pw"
             android:layout_marginTop="10dp"
             android:background="#ffffff"/>
         <EditText
@@ -84,7 +82,6 @@
             android:textColorHint="#878686"
             android:id="@+id/emailText"
             android:drawableStart="@drawable/email"
-            android:drawableLeft="@drawable/email"
             android:layout_marginTop="10dp"
             android:background="#ffffff"/>
 
@@ -129,7 +126,7 @@
             android:textSize="20dp"
             android:textStyle="bold"
             android:textColor="#ffffff"
-            android:backgroundTint="#27952C"
+            android:backgroundTint="#046B40"
             android:text="가입하기"
             android:layout_marginTop="10dp"
             android:layout_gravity="center"
