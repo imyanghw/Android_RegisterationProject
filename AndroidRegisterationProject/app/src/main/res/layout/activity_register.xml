@@ -43,7 +43,7 @@
                 android:id="@+id/idText"
                 android:drawableStart="@drawable/id"
                 android:layout_marginRight="10dp"
-                android:background="#ffffff"/>
+                android:background="#FFFFFF"/>
             <Button
                 android:layout_width="80dp"
                 android:layout_height="40dp"
@@ -69,7 +69,7 @@
             android:id="@+id/passwordText"
             android:drawableStart="@drawable/pw"
             android:layout_marginTop="10dp"
-            android:background="#ffffff"/>
+            android:background="#FFFFFF"/>
         <EditText
             android:inputType="textEmailAddress"
             android:layout_width="280dp"
@@ -83,7 +83,7 @@
             android:id="@+id/emailText"
             android:drawableStart="@drawable/email"
             android:layout_marginTop="10dp"
-            android:background="#ffffff"/>
+            android:background="#FFFFFF"/>
 
         <RadioGroup
             android:layout_width="280dp"

@@ -2,7 +2,11 @@
 <project version="4">
   <component name="AndroidLayouts">
     <shared>
-      <config />
+      <config>
+        <device id="pixel_4_xl" />
+        <pickBest>false</pickBest>
+        <target>android-29</target>
+      </config>
     </shared>
   </component>
   <component name="AndroidLogFilters">
@@ -10,7 +14,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ec93c4ca-cec2-4bb7-86fc-39a01ebd56d4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/registeration/CourseFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/registeration/CourseFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/registeration/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/registeration/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/registeration/RegisterActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/registeration/RegisterActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-v24/id.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_register.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_register.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_course.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_course.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/arrays.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/arrays.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,9 +42,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="valueResourceFile" />
-        <option value="resourceFile" />
-        <option value="layoutResourceFile" />
         <option value="Class" />
+        <option value="layoutResourceFile" />
+        <option value="resourceFile" />
       </list>
     </option>
   </component>
@@ -45,8 +60,8 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="2a08d851013f7ece" />
-    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-01-29T12:02:46.673Z" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectedDevice" value="Nexus_6_API_28" />
+    <property name="DeviceAndSnapshotComboBoxAction.selectionTime" value="2021-02-04T03:35:37.986Z" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="add_unversioned_files" value="true" />
@@ -54,7 +69,13 @@
     <property name="android.sdk.path" value="$PROJECT_DIR$/../../Android" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable-v24" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/drawable-v24" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.17" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="PsdUISettings">
+    <option name="MODULE_TAB" value="Default Config" />
   </component>
   <component name="RecentsManager">
     <key name="android.template.-572193192">
@@ -147,22 +168,30 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="605" y="146" key="#com.intellij.ide.util.MemberChooser" timestamp="1612270627824">
+    <state x="317" y="176" key="#PSD" timestamp="1612413201807">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="605" y="146" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860/1600.-181.1920.1040@0.0.1600.860" timestamp="1612270627824" />
-    <state x="530" y="176" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1612276793944">
+    <state x="317" y="176" key="#PSD/0.0.1600.860/1600.-181.1920.1040@0.0.1600.860" timestamp="1612413201807" />
+    <state x="605" y="146" key="#com.intellij.ide.util.MemberChooser" timestamp="1612444357009">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="530" y="176" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1600.860/1600.-181.1920.1040@0.0.1600.860" timestamp="1612276793944" />
+    <state x="605" y="146" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860/1600.-181.1920.1040@0.0.1600.860" timestamp="1612444357009" />
+    <state x="530" y="176" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1612315446968">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="530" y="176" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1600.860/1600.-181.1920.1040@0.0.1600.860" timestamp="1612315446968" />
     <state x="92" y="92" width="1416" height="676" key="AVDManager" timestamp="1611754228150">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="92" y="92" width="1416" height="676" key="AVDManager/0.0.1600.860/1600.-181.1920.1040@0.0.1600.860" timestamp="1611754228150" />
-    <state x="440" y="217" key="AndroidCreateResourceFileDialog" timestamp="1612268825676">
+    <state x="380" y="185" key="AndroidCreateResourceDirectoryDialog" timestamp="1612410955343">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="440" y="217" key="AndroidCreateResourceFileDialog/0.0.1600.860/1600.-181.1920.1040@0.0.1600.860" timestamp="1612268825676" />
+    <state x="380" y="185" key="AndroidCreateResourceDirectoryDialog/0.0.1600.860/1600.-181.1920.1040@0.0.1600.860" timestamp="1612410955343" />
+    <state x="440" y="217" key="AndroidCreateResourceFileDialog" timestamp="1612421502138">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="440" y="217" key="AndroidCreateResourceFileDialog/0.0.1600.860/1600.-181.1920.1040@0.0.1600.860" timestamp="1612421502138" />
     <state x="644" y="237" key="AndroidCreateXmlResourceDialog" timestamp="1611929464242">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -171,6 +200,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="380" y="135" key="AndroidThemeDialog/0.0.1600.860/1600.-181.1920.1040@0.0.1600.860" timestamp="1611587871782" />
+    <state x="580" y="185" key="FileChooserDialogImpl" timestamp="1612315226157">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="580" y="185" key="FileChooserDialogImpl/0.0.1600.860/1600.-181.1920.1040@0.0.1600.860" timestamp="1612315226157" />
     <state width="1539" height="218" key="GridCell.Tab.0.bottom" timestamp="1612109389797">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
@@ -187,13 +220,13 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state width="1539" height="218" key="GridCell.Tab.0.right/0.0.1600.860/1600.-181.1920.1040@0.0.1600.860" timestamp="1612109389797" />
-    <state x="334" y="62" key="SettingsEditor" timestamp="1612279656653">
+    <state x="346" y="115" key="SettingsEditor" timestamp="1612411547351">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="334" y="62" key="SettingsEditor/0.0.1600.860/1600.-181.1920.1040@0.0.1600.860" timestamp="1612279656653" />
-    <state x="594" y="207" key="chooseDestDirectoryDialog" timestamp="1612276800845">
+    <state x="346" y="115" key="SettingsEditor/0.0.1600.860/1600.-181.1920.1040@0.0.1600.860" timestamp="1612411547351" />
+    <state x="594" y="207" key="chooseDestDirectoryDialog" timestamp="1612315434075">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="594" y="207" key="chooseDestDirectoryDialog/0.0.1600.860/1600.-181.1920.1040@0.0.1600.860" timestamp="1612276800845" />
+    <state x="594" y="207" key="chooseDestDirectoryDialog/0.0.1600.860/1600.-181.1920.1040@0.0.1600.860" timestamp="1612315434075" />
   </component>
 </project>

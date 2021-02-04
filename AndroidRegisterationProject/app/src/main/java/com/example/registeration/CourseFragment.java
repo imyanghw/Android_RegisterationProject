@@ -1,5 +1,6 @@
 package com.example.registeration;
 
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,6 +8,13 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.RadioGroup.OnCheckedChangeListener;
+import android.widget.Spinner;
+import android.widget.TextView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -54,6 +62,87 @@ public class CourseFragment extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
+
+    private ArrayAdapter yearAdapter;
+    private Spinner yearSpinner;
+    private ArrayAdapter termAdapter;
+    private Spinner termSpinner;
+    private ArrayAdapter areaAdapter;
+    private Spinner areaSpinner;
+    private ArrayAdapter majorAdapter;
+    private Spinner majorSpinner;
+
+    private String courseUniversity = "";
+    private String courseYear = "";
+    private String courseTerm = "";
+    private String courseArea = "";
+
+    @Override
+    public void onActivityCreated(Bundle b) {
+        super.onActivityCreated(b);
+
+        final RadioGroup courseUniversityGroup = (RadioGroup)getView().findViewById(R.id.courseUniversityGroup); //학부인지 대학원인지
+        yearSpinner = (Spinner)getView().findViewById(R.id.yearSpinner);
+        termSpinner = (Spinner)getView().findViewById(R.id.termSpinner);
+        areaSpinner = (Spinner)getView().findViewById(R.id.areaSpinner);
+        majorSpinner=(Spinner)getView().findViewById(R.id.majorSpinner);
+
+        courseUniversityGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                RadioButton courseButton = (RadioButton)getView().findViewById(i); //현재 선택된 라디오 버튼이 담김
+                courseUniversity = courseButton.getText().toString();
+
+                yearAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.year, android.R.layout.simple_spinner_dropdown_item);
+                yearSpinner.setAdapter(yearAdapter);
+
+                termAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.term, android.R.layout.simple_spinner_dropdown_item);
+                termSpinner.setAdapter(termAdapter);
+
+                if(courseUniversity.equals("학부")) {
+                    areaAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.universityArea, android.R.layout.simple_spinner_dropdown_item);
+                    areaSpinner.setAdapter(areaAdapter);
+                    majorAdapter=ArrayAdapter.createFromResource(getActivity(),R.array.universityRefinementMajor, android.R.layout.simple_spinner_dropdown_item);
+                    majorSpinner.setAdapter(majorAdapter);
+                }
+                else if(courseUniversity.equals("대학원")) {
+                    areaAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.graduateArea, android.R.layout.simple_spinner_dropdown_item);
+                    areaSpinner.setAdapter(areaAdapter);
+                    majorAdapter=ArrayAdapter.createFromResource(getActivity(),R.array.graduateMajor, android.R.layout.simple_spinner_dropdown_item);
+                    majorSpinner.setAdapter(majorAdapter);
+                }
+            }
+        });
+        areaSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            //학부인지 대학원인지 해당이 교양인지 전공인지 일반대학원인지에 따라 현재 보여줄 수 있는 과가 달라짐
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if(areaSpinner.getSelectedItem().equals("교양및기타"))
+                {
+                    majorAdapter=ArrayAdapter.createFromResource(getActivity(),R.array.universityRefinementMajor, android.R.layout.simple_spinner_dropdown_item);
+                    majorSpinner.setAdapter(majorAdapter);
+                }
+                if(areaSpinner.getSelectedItem().equals("전공"))
+                {
+                    majorAdapter=ArrayAdapter.createFromResource(getActivity(),R.array.universityMajor, android.R.layout.simple_spinner_dropdown_item);
+                    majorSpinner.setAdapter(majorAdapter);
+                }
+                if(areaSpinner.getSelectedItem().equals("일반대학원"))
+                {
+                    majorAdapter=ArrayAdapter.createFromResource(getActivity(),R.array.graduateMajor, android.R.layout.simple_spinner_dropdown_item);
+                    majorSpinner.setAdapter(majorAdapter);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+    } //액티비티가 만들어졌을때 이벤트를 처리
+
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
