@@ -43,7 +43,7 @@ public class LoginActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-                String userID = idText.getText().toString();
+                final String userID = idText.getText().toString();
                 String userPassword = passwordText.getText().toString();
                 //결과를 받아올 수 있도록 한다
                 Response.Listener<String> responseListener = new Response.Listener<String>() {
@@ -61,6 +61,7 @@ public class LoginActivity extends AppCompatActivity {
                                             public void onClick(DialogInterface dialog, int which) {
                                                 Intent intent=new Intent(LoginActivity.this,
                                                         MainActivity.class);
+                                                intent.putExtra("userID", userID);
                                                 LoginActivity.this.startActivity(intent);
                                             } //다이얼로그 메시지 확인을 누르게되면 메인화면으로 이동함
                                         })

@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
@@ -29,6 +30,8 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -87,9 +90,10 @@ public class CourseFragment extends Fragment {
     private Spinner majorSpinner;
 
     private String courseUniversity = "";
-    private String courseYear = "";
-    private String courseTerm = "";
-    private String courseArea = "";
+
+    private ListView courseListView;
+    private CourseListAdapter adapter;
+    private List<Course> courseList;
 
     @Override
     public void onActivityCreated(Bundle b) {
@@ -154,6 +158,12 @@ public class CourseFragment extends Fragment {
 
             }
         });
+
+        courseListView=(ListView)getView().findViewById(R.id.courseListView);
+        courseList=new ArrayList<Course>();
+        adapter=new CourseListAdapter(getContext().getApplicationContext(), courseList, this);
+
+        courseListView.setAdapter(adapter);
 
         Button searchButton=(Button)getView().findViewById(R.id.searchButton);
         searchButton.setOnClickListener(new View.OnClickListener(){
@@ -226,12 +236,56 @@ public class CourseFragment extends Fragment {
         public void onPostExecute(String result) //특정한 강의 학과를 넣었을때 모든 강의 list가 나올 수 있는지 확인하기 위함
         {
             try{
-                AlertDialog dialog;
-                AlertDialog.Builder builder=new AlertDialog.Builder(CourseFragment.this.getContext());
-                    dialog = builder.setMessage(result)
+                courseList.clear(); //해당 강의목록을 초기화시켜줌
+                JSONObject jsonObject=new JSONObject(result);
+                JSONArray jsonArray=jsonObject.getJSONArray("response");
+                int count = 0;
+                int courseID; //강의 고유 번호
+                String courseUniversity; //학부 혹은 대학원
+                int courseYear; //해당 년도
+                String courseTerm; //해당학기
+                String courseArea; //강의영역(교양인지 전공인지)
+                String courseMajor; //해당학과
+                String courseGrade; //해당학년
+                String courseTitle; //강의제목
+                int courseDivide; //강의 분반
+                int coursePersonnel; //강의 제한 인원
+                String courseProfessor; //강의 교수
+                String courseTime; //강의 시간대
+                String courseRoom; //강의실
+
+                while(count<jsonArray.length()) //모든 배열의 원소를 돌면서 동작을 처리
+                {
+                    JSONObject object=jsonArray.getJSONObject(count);
+                    courseID=object.getInt("courseID");
+                    courseUniversity=object.getString("courseUniversity");
+                    courseYear=object.getInt("courseYear");
+                    courseTerm=object.getString("courseTerm");
+                    courseArea=object.getString("courseArea");
+                    courseMajor=object.getString("courseMajor");
+                    courseGrade=object.getString("courseGrade");
+                    courseTitle=object.getString("courseTitle");
+                    courseDivide=object.getInt("courseDivide");
+                    coursePersonnel=object.getInt("coursePersonnel");
+                    courseProfessor=object.getString("courseProfessor");
+                    courseTime=object.getString("courseTime");
+                    courseRoom=object.getString("courseRoom");
+                    Course course=new Course(courseID, courseUniversity, courseYear, courseTerm, courseArea, courseMajor, courseGrade, courseTitle, courseDivide, coursePersonnel, courseProfessor, courseTime, courseRoom);
+                    courseList.add(course);
+                    count++;
+                }
+
+                if(count == 0)
+                {
+                    AlertDialog dialog;
+                    AlertDialog.Builder builder=new AlertDialog.Builder(CourseFragment.this.getActivity());
+                    dialog = builder.setMessage("조회된 강의가 없습니다.")
                             .setPositiveButton("확인", null)
                             .create();
                     dialog.show();
+                }
+                adapter.notifyDataSetChanged();
+
             }catch (Exception e){
                 e.printStackTrace();
             }
