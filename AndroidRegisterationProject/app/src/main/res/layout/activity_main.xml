@@ -22,8 +22,8 @@
             android:textColor="#ffffff"
             android:textSize="18dp"
             android:backgroundTint="#046B40"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"/>
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"/>
 
         <Button
             android:layout_width="match_parent"
@@ -35,22 +35,22 @@
             android:textColor="#ffffff"
             android:textSize="18dp"
             android:backgroundTint="#046B40"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"/>
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"/>
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:id="@+id/statisticsButton"
-            android:text="통계"
+            android:text="강의 분석"
             android:textStyle="bold"
             android:textColor="#ffffff"
             android:textSize="18dp"
             android:backgroundTint="#046B40"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginTop="8dp"/>
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"/>
     </LinearLayout>
 
     <FrameLayout

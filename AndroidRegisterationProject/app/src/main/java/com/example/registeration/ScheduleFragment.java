@@ -67,71 +67,71 @@ public class ScheduleFragment extends Fragment {
         }
     }
 
-    private TextView monday[]=new TextView[10];
-    private TextView tuesday[]=new TextView[10];
-    private TextView wednesday[]=new TextView[10];
-    private TextView thursday[]=new TextView[10];
-    private TextView friday[]=new TextView[10];
+    private AutoResizeTextView monday[]=new AutoResizeTextView[10];
+    private AutoResizeTextView tuesday[]=new AutoResizeTextView[10];
+    private AutoResizeTextView wednesday[]=new AutoResizeTextView[10];
+    private AutoResizeTextView thursday[]=new AutoResizeTextView[10];
+    private AutoResizeTextView friday[]=new AutoResizeTextView[10];
     private Schedule schedule=new Schedule();
 
     @Override
     public void onActivityCreated(Bundle b){
         super.onActivityCreated(b);
         //각각의 TextView를 추가함
-        monday[0] = (TextView) getView().findViewById(R.id.monday0);
-        monday[1] = (TextView) getView().findViewById(R.id.monday1);
-        monday[2] = (TextView) getView().findViewById(R.id.monday2);
-        monday[3] = (TextView) getView().findViewById(R.id.monday3);
-        monday[4] = (TextView) getView().findViewById(R.id.monday4);
-        monday[5] = (TextView) getView().findViewById(R.id.monday5);
-        monday[6] = (TextView) getView().findViewById(R.id.monday6);
-        monday[7] = (TextView) getView().findViewById(R.id.monday7);
-        monday[8] = (TextView) getView().findViewById(R.id.monday8);
-        monday[9] = (TextView) getView().findViewById(R.id.monday9);
+        monday[0] = (AutoResizeTextView) getView().findViewById(R.id.monday0);
+        monday[1] = (AutoResizeTextView) getView().findViewById(R.id.monday1);
+        monday[2] = (AutoResizeTextView) getView().findViewById(R.id.monday2);
+        monday[3] = (AutoResizeTextView) getView().findViewById(R.id.monday3);
+        monday[4] = (AutoResizeTextView) getView().findViewById(R.id.monday4);
+        monday[5] = (AutoResizeTextView) getView().findViewById(R.id.monday5);
+        monday[6] = (AutoResizeTextView) getView().findViewById(R.id.monday6);
+        monday[7] = (AutoResizeTextView) getView().findViewById(R.id.monday7);
+        monday[8] = (AutoResizeTextView) getView().findViewById(R.id.monday8);
+        monday[9] = (AutoResizeTextView) getView().findViewById(R.id.monday9);
 
-        tuesday[0] = (TextView) getView().findViewById(R.id.tuesday0);
-        tuesday[1] = (TextView) getView().findViewById(R.id.tuesday1);
-        tuesday[2] = (TextView) getView().findViewById(R.id.tuesday2);
-        tuesday[3] = (TextView) getView().findViewById(R.id.tuesday3);
-        tuesday[4] = (TextView) getView().findViewById(R.id.tuesday4);
-        tuesday[5] = (TextView) getView().findViewById(R.id.tuesday5);
-        tuesday[6] = (TextView) getView().findViewById(R.id.tuesday6);
-        tuesday[7] = (TextView) getView().findViewById(R.id.tuesday7);
-        tuesday[8] = (TextView) getView().findViewById(R.id.tuesday8);
-        tuesday[9] = (TextView) getView().findViewById(R.id.tuesday9);
+        tuesday[0] = (AutoResizeTextView) getView().findViewById(R.id.tuesday0);
+        tuesday[1] = (AutoResizeTextView) getView().findViewById(R.id.tuesday1);
+        tuesday[2] = (AutoResizeTextView) getView().findViewById(R.id.tuesday2);
+        tuesday[3] = (AutoResizeTextView) getView().findViewById(R.id.tuesday3);
+        tuesday[4] = (AutoResizeTextView) getView().findViewById(R.id.tuesday4);
+        tuesday[5] = (AutoResizeTextView) getView().findViewById(R.id.tuesday5);
+        tuesday[6] = (AutoResizeTextView) getView().findViewById(R.id.tuesday6);
+        tuesday[7] = (AutoResizeTextView) getView().findViewById(R.id.tuesday7);
+        tuesday[8] = (AutoResizeTextView) getView().findViewById(R.id.tuesday8);
+        tuesday[9] = (AutoResizeTextView) getView().findViewById(R.id.tuesday9);
 
-        wednesday[0] = (TextView) getView().findViewById(R.id.wednesday0);
-        wednesday[1] = (TextView) getView().findViewById(R.id.wednesday1);
-        wednesday[2] = (TextView) getView().findViewById(R.id.wednesday2);
-        wednesday[3] = (TextView) getView().findViewById(R.id.wednesday3);
-        wednesday[4] = (TextView) getView().findViewById(R.id.wednesday4);
-        wednesday[5] = (TextView) getView().findViewById(R.id.wednesday5);
-        wednesday[6] = (TextView) getView().findViewById(R.id.wednesday6);
-        wednesday[7] = (TextView) getView().findViewById(R.id.wednesday7);
-        wednesday[8] = (TextView) getView().findViewById(R.id.wednesday8);
-        wednesday[9] = (TextView) getView().findViewById(R.id.wednesday9);
+        wednesday[0] = (AutoResizeTextView) getView().findViewById(R.id.wednesday0);
+        wednesday[1] = (AutoResizeTextView) getView().findViewById(R.id.wednesday1);
+        wednesday[2] = (AutoResizeTextView) getView().findViewById(R.id.wednesday2);
+        wednesday[3] = (AutoResizeTextView) getView().findViewById(R.id.wednesday3);
+        wednesday[4] = (AutoResizeTextView) getView().findViewById(R.id.wednesday4);
+        wednesday[5] = (AutoResizeTextView) getView().findViewById(R.id.wednesday5);
+        wednesday[6] = (AutoResizeTextView) getView().findViewById(R.id.wednesday6);
+        wednesday[7] = (AutoResizeTextView) getView().findViewById(R.id.wednesday7);
+        wednesday[8] = (AutoResizeTextView) getView().findViewById(R.id.wednesday8);
+        wednesday[9] = (AutoResizeTextView) getView().findViewById(R.id.wednesday9);
 
-        thursday[0] = (TextView) getView().findViewById(R.id.thursday0);
-        thursday[1] = (TextView) getView().findViewById(R.id.thursday1);
-        thursday[2] = (TextView) getView().findViewById(R.id.thursday2);
-        thursday[3] = (TextView) getView().findViewById(R.id.thursday3);
-        thursday[4] = (TextView) getView().findViewById(R.id.thursday4);
-        thursday[5] = (TextView) getView().findViewById(R.id.thursday5);
-        thursday[6] = (TextView) getView().findViewById(R.id.thursday6);
-        thursday[7] = (TextView) getView().findViewById(R.id.thursday7);
-        thursday[8] = (TextView) getView().findViewById(R.id.thursday8);
-        thursday[9] = (TextView) getView().findViewById(R.id.thursday9);
+        thursday[0] = (AutoResizeTextView) getView().findViewById(R.id.thursday0);
+        thursday[1] = (AutoResizeTextView) getView().findViewById(R.id.thursday1);
+        thursday[2] = (AutoResizeTextView) getView().findViewById(R.id.thursday2);
+        thursday[3] = (AutoResizeTextView) getView().findViewById(R.id.thursday3);
+        thursday[4] = (AutoResizeTextView) getView().findViewById(R.id.thursday4);
+        thursday[5] = (AutoResizeTextView) getView().findViewById(R.id.thursday5);
+        thursday[6] = (AutoResizeTextView) getView().findViewById(R.id.thursday6);
+        thursday[7] = (AutoResizeTextView) getView().findViewById(R.id.thursday7);
+        thursday[8] = (AutoResizeTextView) getView().findViewById(R.id.thursday8);
+        thursday[9] = (AutoResizeTextView) getView().findViewById(R.id.thursday9);
 
-        friday[0]=(TextView)getView().findViewById(R.id.friday0);
-        friday[1]=(TextView)getView().findViewById(R.id.friday1);
-        friday[2]=(TextView)getView().findViewById(R.id.friday2);
-        friday[3]=(TextView)getView().findViewById(R.id.friday3);
-        friday[4]=(TextView)getView().findViewById(R.id.friday4);
-        friday[5]=(TextView)getView().findViewById(R.id.friday5);
-        friday[6]=(TextView)getView().findViewById(R.id.friday6);
-        friday[7]=(TextView)getView().findViewById(R.id.friday7);
-        friday[8]=(TextView)getView().findViewById(R.id.friday8);
-        friday[9]=(TextView)getView().findViewById(R.id.friday9);
+        friday[0]=(AutoResizeTextView)getView().findViewById(R.id.friday0);
+        friday[1]=(AutoResizeTextView)getView().findViewById(R.id.friday1);
+        friday[2]=(AutoResizeTextView)getView().findViewById(R.id.friday2);
+        friday[3]=(AutoResizeTextView)getView().findViewById(R.id.friday3);
+        friday[4]=(AutoResizeTextView)getView().findViewById(R.id.friday4);
+        friday[5]=(AutoResizeTextView)getView().findViewById(R.id.friday5);
+        friday[6]=(AutoResizeTextView)getView().findViewById(R.id.friday6);
+        friday[7]=(AutoResizeTextView)getView().findViewById(R.id.friday7);
+        friday[8]=(AutoResizeTextView)getView().findViewById(R.id.friday8);
+        friday[9]=(AutoResizeTextView)getView().findViewById(R.id.friday9);
 
         new BackgroundTask().execute();
     }

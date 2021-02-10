@@ -207,7 +207,7 @@ public class Schedule {
         if (courserProfessor.equals("")) {
             professor = "";
         } else {
-            professor = "(" + courserProfessor + ")";
+            professor = "";
         }
         int temp;
         //월:[3][4][5] 화:[4][5]
@@ -292,39 +292,90 @@ public class Schedule {
         }
     }
 
-    public void setting(TextView[] monday, TextView[] tuesday, TextView[] wednesday, TextView[] thursday, TextView[] friday, Context context)
+    public void setting(AutoResizeTextView[] monday, AutoResizeTextView[] tuesday, AutoResizeTextView[] wednesday, AutoResizeTextView[] thursday, AutoResizeTextView[] friday, Context context)
     { //해당 강의목록을 보여줄 수 있도록 세팅
+        int maxLength=0;
+        String maxString=""; //TextView에 들어가는 내용중에서 가장 긴 Text를 골라서 넣어줌
+        for(int i=0; i<10; i++)
+        {
+            if(this.monday[i].length()>maxLength){ //현재의 Text가 maxLength보다 길면
+                maxLength = this.monday[i].length();
+                maxString = this.monday[i];
+            }
+            if(this.tuesday[i].length()>maxLength){
+                maxLength = this.tuesday[i].length();
+                maxString = this.tuesday[i];
+            }
+            if(this.wednesday[i].length()>maxLength){
+                maxLength = this.wednesday[i].length();
+                maxString = this.wednesday[i];
+            }
+            if(this.thursday[i].length()>maxLength){
+                maxLength = this.thursday[i].length();
+                maxString = this.thursday[i];
+            }
+            if(this.friday[i].length()>maxLength){
+                maxLength = this.friday[i].length();
+                maxString = this.friday[i];
+            }
+        }
+
         for(int i=0; i<10; i++){
             if(!this.monday[i].equals("")) //특정한 강의가 배열에 들어가있지 않다면
             {
                 monday[i].setText(this.monday[i]);
-                monday[i].setBackgroundColor(context.getResources().getColor(R.color.colorPrimaryLight));
+                monday[i].setTextColor(context.getResources().getColor(R.color.colorPrimaryLight));
+            }
+            else
+            {
+                monday[i].setText(maxString);
             }
 
             if(!this.tuesday[i].equals(""))
             {
                 tuesday[i].setText(this.tuesday[i]);
-                tuesday[i].setBackgroundColor(context.getResources().getColor(R.color.colorPrimaryLight));
+                tuesday[i].setTextColor(context.getResources().getColor(R.color.colorPrimaryLight));
+            }
+            else
+            {
+                tuesday[i].setText(maxString);
             }
 
             if(!this.wednesday[i].equals(""))
             {
                 wednesday[i].setText(this.wednesday[i]);
-                wednesday[i].setBackgroundColor(context.getResources().getColor(R.color.colorPrimaryLight));
+                wednesday[i].setTextColor(context.getResources().getColor(R.color.colorPrimaryLight));
+            }
+            else
+            {
+                wednesday[i].setText(maxString);
             }
 
             if(!this.thursday[i].equals(""))
             {
                 thursday[i].setText(this.thursday[i]);
-                thursday[i].setBackgroundColor(context.getResources().getColor(R.color.colorPrimaryLight));
+                thursday[i].setTextColor(context.getResources().getColor(R.color.colorPrimaryLight));
+            }
+            else
+            {
+                thursday[i].setText(maxString);
             }
 
             if(!this.friday[i].equals(""))
             {
                 friday[i].setText(this.friday[i]);
-                friday[i].setBackgroundColor(context.getResources().getColor(R.color.colorPrimaryLight));
+                friday[i].setTextColor(context.getResources().getColor(R.color.colorPrimaryLight));
+            }
+            else
+            {
+                friday[i].setText(maxString);
             }
 
+            monday[i].resizeText();
+            tuesday[i].resizeText();
+            wednesday[i].resizeText();
+            thursday[i].resizeText();
+            friday[i].resizeText();
         }
     }
 }

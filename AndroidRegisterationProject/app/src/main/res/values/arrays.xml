@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <array name="autosize_text_sizes">
+        <item>18sp</item>
+    </array>
+    <array name="autosize_text_sizes2">
+        <item>15sp</item>
+    </array>
+
     <string-array name="major">
         <item>전공을 선택하세요.</item>
         <item>메카트로닉스공학과</item>

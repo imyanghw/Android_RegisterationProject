@@ -14,15 +14,15 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/colorPrimary">
+            android:background="@color/colorPrimaryLight">
 
-            <TextView
+            <com.example.registeration.AutoResizeTextView
                 android:text=""
                 android:layout_width="35dp"
                 android:layout_height="match_parent"
                 android:drawableStart="@drawable/calendar"
                 android:layout_gravity="center"/>
-            <TextView
+            <com.example.registeration.AutoResizeTextView
                 android:text="월"
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
@@ -30,9 +30,10 @@
                 android:gravity="center"
                 android:textColor="#ffffff"
                 android:textStyle="bold"
-                android:textSize="17dp"
+                android:autoSizeTextType="uniform"
+                android:autoSizePresetSizes="@array/autosize_text_sizes"
                 android:textAlignment="center"/>
-            <TextView
+            <com.example.registeration.AutoResizeTextView
                 android:text="화"
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
@@ -40,9 +41,10 @@
                 android:gravity="center"
                 android:textColor="#ffffff"
                 android:textStyle="bold"
-                android:textSize="17dp"
+                android:autoSizeTextType="uniform"
+                android:autoSizePresetSizes="@array/autosize_text_sizes"
                 android:textAlignment="center"/>
-            <TextView
+            <com.example.registeration.AutoResizeTextView
                 android:text="수"
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
@@ -50,9 +52,10 @@
                 android:gravity="center"
                 android:textColor="#ffffff"
                 android:textStyle="bold"
-                android:textSize="17dp"
+                android:autoSizeTextType="uniform"
+                android:autoSizePresetSizes="@array/autosize_text_sizes"
                 android:textAlignment="center"/>
-            <TextView
+            <com.example.registeration.AutoResizeTextView
                 android:text="목"
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
@@ -60,9 +63,10 @@
                 android:gravity="center"
                 android:textColor="#ffffff"
                 android:textStyle="bold"
-                android:textSize="17dp"
+                android:autoSizeTextType="uniform"
+                android:autoSizePresetSizes="@array/autosize_text_sizes"
                 android:textAlignment="center"/>
-            <TextView
+            <com.example.registeration.AutoResizeTextView
                 android:text="금"
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
@@ -70,10 +74,10 @@
                 android:gravity="center"
                 android:textColor="#ffffff"
                 android:textStyle="bold"
-                android:textSize="17dp"
+                android:autoSizeTextType="uniform"
+                android:autoSizePresetSizes="@array/autosize_text_sizes"
                 android:textAlignment="center" />
         </TableRow>
-
 
         <TableRow
             android:layout_width="match_parent"
@@ -81,17 +85,18 @@
             android:background="@color/colorPrimaryLight"
             android:layout_weight="1">
 
-            <TextView
+            <com.example.registeration.AutoResizeTextView
                 android:text="9"
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
-                android:background="@color/colorPrimary"
+                android:background="@color/colorPrimaryLight"
                 android:textColor="#ffffff"
                 android:textStyle="bold"
                 android:gravity="right"
-                android:textSize="15dp"
+                android:autoSizeTextType="uniform"
+                android:autoSizePresetSizes="@array/autosize_text_sizes"
                 android:paddingRight="1dp"/>
-            <TextView
+            <com.example.registeration.AutoResizeTextView
                 android:text="월"
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
@@ -100,9 +105,11 @@
                 android:textColor="#ffffff"
                 android:textStyle="bold"
                 android:background="@drawable/cell_shape"
+                android:autoSizeTextType="uniform"
+                android:autoSizePresetSizes="@array/autosize_text_sizes2"
                 android:id="@+id/monday0"
                 android:padding="2dp"/>
-            <TextView
+            <com.example.registeration.AutoResizeTextView
                 android:text="화"
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
@@ -111,9 +118,11 @@
                 android:textColor="#ffffff"
                 android:textStyle="bold"
                 android:background="@drawable/cell_shape"
+                android:autoSizeTextType="uniform"
+                android:autoSizePresetSizes="@array/autosize_text_sizes2"
                 android:id="@+id/tuesday0"
                 android:padding="2dp"/>
-            <TextView
+            <com.example.registeration.AutoResizeTextView
                 android:text="수"
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
@@ -122,9 +131,11 @@
                 android:textColor="#ffffff"
                 android:textStyle="bold"
                 android:background="@drawable/cell_shape"
+                android:autoSizeTextType="uniform"
+                android:autoSizePresetSizes="@array/autosize_text_sizes2"
                 android:id="@+id/wednesday0"
                 android:padding="2dp"/>
-            <TextView
+            <com.example.registeration.AutoResizeTextView
                 android:text="목"
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
@@ -133,9 +144,11 @@
                 android:textColor="#ffffff"
                 android:textStyle="bold"
                 android:background="@drawable/cell_shape"
+                android:autoSizeTextType="uniform"
+                android:autoSizePresetSizes="@array/autosize_text_sizes2"
                 android:id="@+id/thursday0"
                 android:padding="2dp"/>
-            <TextView
+            <com.example.registeration.AutoResizeTextView
                 android:text="금"
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
@@ -144,6 +157,8 @@
                 android:textColor="#ffffff"
                 android:textStyle="bold"
                 android:background="@drawable/cell_shape"
+                android:autoSizeTextType="uniform"
+                android:autoSizePresetSizes="@array/autosize_text_sizes2"
                 android:id="@+id/friday0"
                 android:padding="2dp"/>
         </TableRow>
@@ -154,18 +169,19 @@
             android:background="@color/colorPrimaryLight"
             android:layout_weight="1">
 
-            <TextView
+            <com.example.registeration.AutoResizeTextView
                 android:text="10"
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
-                android:background="@color/colorPrimary"
+                android:background="@color/colorPrimaryLight"
                 android:textColor="#ffffff"
                 android:textStyle="bold"
                 android:gravity="right"
-                android:textSize="15dp"
+                android:autoSizeTextType="uniform"
+                android:autoSizePresetSizes="@array/autosize_text_sizes"
                 android:paddingRight="1dp"/>
 
-            <TextView
+            <com.example.registeration.AutoResizeTextView
                 android:text="월"
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
@@ -174,9 +190,11 @@
                 android:textColor="#ffffff"
                 android:textStyle="bold"
                 android:background="@drawable/cell_shape"
+                android:autoSizeTextType="uniform"
+                android:autoSizePresetSizes="@array/autosize_text_sizes2"
                 android:id="@+id/monday1"
                 android:padding="2dp"/>
-            <TextView
+            <com.example.registeration.AutoResizeTextView
                 android:text="화"
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
@@ -185,9 +203,11 @@
                 android:textColor="#ffffff"
                 android:textStyle="bold"
                 android:background="@drawable/cell_shape"
+                android:autoSizeTextType="uniform"
+                android:autoSizePresetSizes="@array/autosize_text_sizes2"
                 android:id="@+id/tuesday1"
                 android:padding="2dp"/>
-            <TextView
+            <com.example.registeration.AutoResizeTextView
                 android:text="수"
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
@@ -196,9 +216,11 @@
                 android:textColor="#ffffff"
                 android:textStyle="bold"
                 android:background="@drawable/cell_shape"
+                android:autoSizeTextType="uniform"
+                android:autoSizePresetSizes="@array/autosize_text_sizes2"
                 android:id="@+id/wednesday1"
                 android:padding="2dp"/>
-            <TextView
+            <com.example.registeration.AutoResizeTextView
                 android:text="목"
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
@@ -207,9 +229,11 @@
                 android:textColor="#ffffff"
                 android:textStyle="bold"
                 android:background="@drawable/cell_shape"
+                android:autoSizeTextType="uniform"
+                android:autoSizePresetSizes="@array/autosize_text_sizes2"
                 android:id="@+id/thursday1"
                 android:padding="2dp"/>
-            <TextView
+            <com.example.registeration.AutoResizeTextView
                 android:text="금"
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
@@ -218,6 +242,8 @@
                 android:textColor="#ffffff"
                 android:textStyle="bold"
                 android:background="@drawable/cell_shape"
+                android:autoSizeTextType="uniform"
+                android:autoSizePresetSizes="@array/autosize_text_sizes2"
                 android:id="@+id/friday1"
                 android:padding="2dp"/>
         </TableRow>
@@ -228,18 +254,19 @@
             android:background="@color/colorPrimaryLight"
             android:layout_weight="1">
 
-            <TextView
+            <com.example.registeration.AutoResizeTextView
                 android:text="11"
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
-                android:background="@color/colorPrimary"
+                android:background="@color/colorPrimaryLight"
                 android:textColor="#ffffff"
                 android:textStyle="bold"
                 android:paddingRight="1dp"
                 android:gravity="right"
-                android:textSize="15dp"/>
+                android:autoSizeTextType="uniform"
+                android:autoSizePresetSizes="@array/autosize_text_sizes"/>
 
-            <TextView
+            <com.example.registeration.AutoResizeTextView
                 android:text="월"
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
@@ -248,9 +275,11 @@
                 android:textColor="#ffffff"
                 android:textStyle="bold"
                 android:background="@drawable/cell_shape"
+                android:autoSizeTextType="uniform"
+                android:autoSizePresetSizes="@array/autosize_text_sizes2"
                 android:id="@+id/monday2"
                 android:padding="2dp"/>
-            <TextView
+            <com.example.registeration.AutoResizeTextView
                 android:text="화"
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
@@ -259,9 +288,11 @@
                 android:textColor="#ffffff"
                 android:textStyle="bold"
                 android:background="@drawable/cell_shape"
+                android:autoSizeTextType="uniform"
+                android:autoSizePresetSizes="@array/autosize_text_sizes2"
                 android:id="@+id/tuesday2"
                 android:padding="2dp"/>
-            <TextView
+            <com.example.registeration.AutoResizeTextView
                 android:text="수"
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
@@ -270,9 +301,11 @@
                 android:textColor="#ffffff"
                 android:textStyle="bold"
                 android:background="@drawable/cell_shape"
+                android:autoSizeTextType="uniform"
+                android:autoSizePresetSizes="@array/autosize_text_sizes2"
                 android:id="@+id/wednesday2"
                 android:padding="2dp"/>
-            <TextView
+            <com.example.registeration.AutoResizeTextView
                 android:text="목"
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
@@ -281,9 +314,11 @@
                 android:textColor="#ffffff"
                 android:textStyle="bold"
                 android:background="@drawable/cell_shape"
+                android:autoSizeTextType="uniform"
+                android:autoSizePresetSizes="@array/autosize_text_sizes2"
                 android:id="@+id/thursday2"
                 android:padding="2dp"/>
-            <TextView
+            <com.example.registeration.AutoResizeTextView
                 android:text="금"
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
@@ -292,6 +327,8 @@
                 android:textColor="#ffffff"
                 android:textStyle="bold"
                 android:background="@drawable/cell_shape"
+                android:autoSizeTextType="uniform"
+                android:autoSizePresetSizes="@array/autosize_text_sizes2"
                 android:id="@+id/friday2"
                 android:padding="2dp"/>
 
@@ -303,17 +340,18 @@
             android:background="@color/colorPrimaryLight"
             android:layout_weight="1">
 
-            <TextView
+            <com.example.registeration.AutoResizeTextView
                 android:text="12"
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
-                android:background="@color/colorPrimary"
+                android:background="@color/colorPrimaryLight"
                 android:textColor="#ffffff"
                 android:textStyle="bold"
                 android:gravity="right"
-                android:textSize="15dp"
+                android:autoSizeTextType="uniform"
+                android:autoSizePresetSizes="@array/autosize_text_sizes"
                 android:paddingRight="1dp"/>
-            <TextView
+            <com.example.registeration.AutoResizeTextView
                 android:text="월"
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
@@ -322,9 +360,11 @@
                 android:textColor="#ffffff"
                 android:textStyle="bold"
                 android:background="@drawable/cell_shape"
+                android:autoSizeTextType="uniform"
+                android:autoSizePresetSizes="@array/autosize_text_sizes2"
                 android:id="@+id/monday3"
                 android:padding="2dp"/>
-            <TextView
+            <com.example.registeration.AutoResizeTextView
                 android:text="화"
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
@@ -333,9 +373,11 @@
                 android:textColor="#ffffff"
                 android:textStyle="bold"
                 android:background="@drawable/cell_shape"
+                android:autoSizeTextType="uniform"
+                android:autoSizePresetSizes="@array/autosize_text_sizes2"
                 android:id="@+id/tuesday3"
                 android:padding="2dp"/>
-            <TextView
+            <com.example.registeration.AutoResizeTextView
                 android:text="수"
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
@@ -344,9 +386,11 @@
                 android:textColor="#ffffff"
                 android:textStyle="bold"
                 android:background="@drawable/cell_shape"
+                android:autoSizeTextType="uniform"
+                android:autoSizePresetSizes="@array/autosize_text_sizes2"
                 android:id="@+id/wednesday3"
                 android:padding="2dp"/>
-            <TextView
+            <com.example.registeration.AutoResizeTextView
                 android:text="목"
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
@@ -355,9 +399,11 @@
                 android:textColor="#ffffff"
                 android:textStyle="bold"
                 android:background="@drawable/cell_shape"
+                android:autoSizeTextType="uniform"
+                android:autoSizePresetSizes="@array/autosize_text_sizes2"
                 android:id="@+id/thursday3"
                 android:padding="2dp"/>
-            <TextView
+            <com.example.registeration.AutoResizeTextView
                 android:text="금"
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
@@ -366,6 +412,8 @@
                 android:textColor="#ffffff"
                 android:textStyle="bold"
                 android:background="@drawable/cell_shape"
+                android:autoSizeTextType="uniform"
+                android:autoSizePresetSizes="@array/autosize_text_sizes2"
                 android:id="@+id/friday3"
                 android:padding="2dp"/>
 
@@ -377,18 +425,19 @@
             android:background="@color/colorPrimaryLight"
             android:layout_weight="1">
 
-            <TextView
+            <com.example.registeration.AutoResizeTextView
                 android:text="1"
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
-                android:background="@color/colorPrimary"
+                android:background="@color/colorPrimaryLight"
                 android:textColor="#ffffff"
                 android:textStyle="bold"
                 android:gravity="right"
-                android:textSize="15dp"
+                android:autoSizeTextType="uniform"
+                android:autoSizePresetSizes="@array/autosize_text_sizes"
                 android:paddingRight="1dp"/>
 
-            <TextView
+            <com.example.registeration.AutoResizeTextView
                 android:text="월"
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
@@ -397,9 +446,11 @@
                 android:textColor="#ffffff"
                 android:textStyle="bold"
                 android:background="@drawable/cell_shape"
+                android:autoSizeTextType="uniform"
+                android:autoSizePresetSizes="@array/autosize_text_sizes2"
                 android:id="@+id/monday4"
                 android:padding="2dp"/>
-            <TextView
+            <com.example.registeration.AutoResizeTextView
                 android:text="화"
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
@@ -408,9 +459,11 @@
                 android:textColor="#ffffff"
                 android:textStyle="bold"
                 android:background="@drawable/cell_shape"
+                android:autoSizeTextType="uniform"
+                android:autoSizePresetSizes="@array/autosize_text_sizes2"
                 android:id="@+id/tuesday4"
                 android:padding="2dp"/>
-            <TextView
+            <com.example.registeration.AutoResizeTextView
                 android:text="수"
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
@@ -419,9 +472,11 @@
                 android:textColor="#ffffff"
                 android:textStyle="bold"
                 android:background="@drawable/cell_shape"
+                android:autoSizeTextType="uniform"
+                android:autoSizePresetSizes="@array/autosize_text_sizes2"
                 android:id="@+id/wednesday4"
                 android:padding="2dp"/>
-            <TextView
+            <com.example.registeration.AutoResizeTextView
                 android:text="목"
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
@@ -430,9 +485,11 @@
                 android:textColor="#ffffff"
                 android:textStyle="bold"
                 android:background="@drawable/cell_shape"
+                android:autoSizeTextType="uniform"
+                android:autoSizePresetSizes="@array/autosize_text_sizes2"
                 android:id="@+id/thursday4"
                 android:padding="2dp"/>
-            <TextView
+            <com.example.registeration.AutoResizeTextView
                 android:text="금"
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
@@ -441,6 +498,8 @@
                 android:textColor="#ffffff"
                 android:textStyle="bold"
                 android:background="@drawable/cell_shape"
+                android:autoSizeTextType="uniform"
+                android:autoSizePresetSizes="@array/autosize_text_sizes2"
                 android:id="@+id/friday4"
                 android:padding="2dp"/>
         </TableRow>
@@ -451,17 +510,18 @@
             android:background="@color/colorPrimaryLight"
             android:layout_weight="1">
 
-            <TextView
+            <com.example.registeration.AutoResizeTextView
                 android:text="2"
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
-                android:background="@color/colorPrimary"
+                android:background="@color/colorPrimaryLight"
                 android:textColor="#ffffff"
                 android:textStyle="bold"
                 android:gravity="right"
-                android:textSize="15dp"
+                android:autoSizeTextType="uniform"
+                android:autoSizePresetSizes="@array/autosize_text_sizes"
                 android:paddingRight="1dp"/>
-            <TextView
+            <com.example.registeration.AutoResizeTextView
                 android:text="월"
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
@@ -470,9 +530,11 @@
                 android:textColor="#ffffff"
                 android:textStyle="bold"
                 android:background="@drawable/cell_shape"
+                android:autoSizeTextType="uniform"
+                android:autoSizePresetSizes="@array/autosize_text_sizes2"
                 android:id="@+id/monday5"
                 android:padding="2dp"/>
-            <TextView
+            <com.example.registeration.AutoResizeTextView
                 android:text="화"
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
@@ -481,9 +543,11 @@
                 android:textColor="#ffffff"
                 android:textStyle="bold"
                 android:background="@drawable/cell_shape"
+                android:autoSizeTextType="uniform"
+                android:autoSizePresetSizes="@array/autosize_text_sizes2"
                 android:id="@+id/tuesday5"
                 android:padding="2dp"/>
-            <TextView
+            <com.example.registeration.AutoResizeTextView
                 android:text="수"
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
@@ -492,9 +556,11 @@
                 android:textColor="#ffffff"
                 android:textStyle="bold"
                 android:background="@drawable/cell_shape"
+                android:autoSizeTextType="uniform"
+                android:autoSizePresetSizes="@array/autosize_text_sizes2"
                 android:id="@+id/wednesday5"
                 android:padding="2dp"/>
-            <TextView
+            <com.example.registeration.AutoResizeTextView
                 android:text="목"
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
@@ -503,9 +569,11 @@
                 android:textColor="#ffffff"
                 android:textStyle="bold"
                 android:background="@drawable/cell_shape"
+                android:autoSizeTextType="uniform"
+                android:autoSizePresetSizes="@array/autosize_text_sizes2"
                 android:id="@+id/thursday5"
                 android:padding="2dp"/>
-            <TextView
+            <com.example.registeration.AutoResizeTextView
                 android:text="금"
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
@@ -514,6 +582,8 @@
                 android:textColor="#ffffff"
                 android:textStyle="bold"
                 android:background="@drawable/cell_shape"
+                android:autoSizeTextType="uniform"
+                android:autoSizePresetSizes="@array/autosize_text_sizes2"
                 android:id="@+id/friday5"
                 android:padding="2dp"/>
         </TableRow>
@@ -524,17 +594,18 @@
             android:background="@color/colorPrimaryLight"
             android:layout_weight="1">
 
-            <TextView
+            <com.example.registeration.AutoResizeTextView
                 android:text="3"
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
-                android:background="@color/colorPrimary"
+                android:background="@color/colorPrimaryLight"
                 android:textColor="#ffffff"
                 android:textStyle="bold"
                 android:gravity="right"
-                android:textSize="15dp"
+                android:autoSizeTextType="uniform"
+                android:autoSizePresetSizes="@array/autosize_text_sizes"
                 android:paddingRight="1dp"/>
-            <TextView
+            <com.example.registeration.AutoResizeTextView
                 android:text="월"
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
@@ -543,9 +614,11 @@
                 android:textColor="#ffffff"
                 android:textStyle="bold"
                 android:background="@drawable/cell_shape"
+                android:autoSizeTextType="uniform"
+                android:autoSizePresetSizes="@array/autosize_text_sizes2"
                 android:id="@+id/monday6"
                 android:padding="2dp"/>
-            <TextView
+            <com.example.registeration.AutoResizeTextView
                 android:text="화"
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
@@ -554,9 +627,11 @@
                 android:textColor="#ffffff"
                 android:textStyle="bold"
                 android:background="@drawable/cell_shape"
+                android:autoSizeTextType="uniform"
+                android:autoSizePresetSizes="@array/autosize_text_sizes2"
                 android:id="@+id/tuesday6"
                 android:padding="2dp"/>
-            <TextView
+            <com.example.registeration.AutoResizeTextView
                 android:text="수"
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
@@ -565,9 +640,11 @@
                 android:textColor="#ffffff"
                 android:textStyle="bold"
                 android:background="@drawable/cell_shape"
+                android:autoSizeTextType="uniform"
+                android:autoSizePresetSizes="@array/autosize_text_sizes2"
                 android:id="@+id/wednesday6"
                 android:padding="2dp"/>
-            <TextView
+            <com.example.registeration.AutoResizeTextView
                 android:text="목"
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
@@ -576,9 +653,11 @@
                 android:textColor="#ffffff"
                 android:textStyle="bold"
                 android:background="@drawable/cell_shape"
+                android:autoSizeTextType="uniform"
+                android:autoSizePresetSizes="@array/autosize_text_sizes2"
                 android:id="@+id/thursday6"
                 android:padding="2dp"/>
-            <TextView
+            <com.example.registeration.AutoResizeTextView
                 android:text="금"
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
@@ -587,6 +666,8 @@
                 android:textColor="#ffffff"
                 android:textStyle="bold"
                 android:background="@drawable/cell_shape"
+                android:autoSizeTextType="uniform"
+                android:autoSizePresetSizes="@array/autosize_text_sizes2"
                 android:id="@+id/friday6"
                 android:padding="2dp"/>
         </TableRow>
@@ -597,18 +678,19 @@
             android:background="@color/colorPrimaryLight"
             android:layout_weight="1">
 
-            <TextView
+            <com.example.registeration.AutoResizeTextView
                 android:text="4"
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
-                android:background="@color/colorPrimary"
+                android:background="@color/colorPrimaryLight"
                 android:textColor="#ffffff"
                 android:textStyle="bold"
                 android:gravity="right"
-                android:textSize="15dp"
+                android:autoSizeTextType="uniform"
+                android:autoSizePresetSizes="@array/autosize_text_sizes"
                 android:paddingRight="1dp"/>
 
-            <TextView
+            <com.example.registeration.AutoResizeTextView
                 android:text="월"
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
@@ -617,9 +699,11 @@
                 android:textColor="#ffffff"
                 android:textStyle="bold"
                 android:background="@drawable/cell_shape"
+                android:autoSizeTextType="uniform"
+                android:autoSizePresetSizes="@array/autosize_text_sizes2"
                 android:id="@+id/monday7"
                 android:padding="2dp"/>
-            <TextView
+            <com.example.registeration.AutoResizeTextView
                 android:text="화"
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
@@ -628,9 +712,11 @@
                 android:textColor="#ffffff"
                 android:textStyle="bold"
                 android:background="@drawable/cell_shape"
+                android:autoSizeTextType="uniform"
+                android:autoSizePresetSizes="@array/autosize_text_sizes2"
                 android:id="@+id/tuesday7"
                 android:padding="2dp"/>
-            <TextView
+            <com.example.registeration.AutoResizeTextView
                 android:text="수"
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
@@ -639,9 +725,11 @@
                 android:textColor="#ffffff"
                 android:textStyle="bold"
                 android:background="@drawable/cell_shape"
+                android:autoSizeTextType="uniform"
+                android:autoSizePresetSizes="@array/autosize_text_sizes2"
                 android:id="@+id/wednesday7"
                 android:padding="2dp"/>
-            <TextView
+            <com.example.registeration.AutoResizeTextView
                 android:text="목"
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
@@ -650,9 +738,11 @@
                 android:textColor="#ffffff"
                 android:textStyle="bold"
                 android:background="@drawable/cell_shape"
+                android:autoSizeTextType="uniform"
+                android:autoSizePresetSizes="@array/autosize_text_sizes2"
                 android:id="@+id/thursday7"
                 android:padding="2dp"/>
-            <TextView
+            <com.example.registeration.AutoResizeTextView
                 android:text="금"
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
@@ -661,6 +751,8 @@
                 android:textColor="#ffffff"
                 android:textStyle="bold"
                 android:background="@drawable/cell_shape"
+                android:autoSizeTextType="uniform"
+                android:autoSizePresetSizes="@array/autosize_text_sizes2"
                 android:id="@+id/friday7"
                 android:padding="2dp"/>
 
@@ -672,18 +764,19 @@
             android:background="@color/colorPrimaryLight"
             android:layout_weight="1">
 
-            <TextView
+            <com.example.registeration.AutoResizeTextView
                 android:text="5"
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
-                android:background="@color/colorPrimary"
+                android:background="@color/colorPrimaryLight"
                 android:textColor="#ffffff"
                 android:textStyle="bold"
                 android:gravity="right"
-                android:textSize="15dp"
+                android:autoSizeTextType="uniform"
+                android:autoSizePresetSizes="@array/autosize_text_sizes"
                 android:paddingRight="1dp"/>
 
-            <TextView
+            <com.example.registeration.AutoResizeTextView
                 android:text="월"
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
@@ -692,9 +785,11 @@
                 android:textColor="#ffffff"
                 android:textStyle="bold"
                 android:background="@drawable/cell_shape"
+                android:autoSizeTextType="uniform"
+                android:autoSizePresetSizes="@array/autosize_text_sizes2"
                 android:id="@+id/monday8"
                 android:padding="2dp"/>
-            <TextView
+            <com.example.registeration.AutoResizeTextView
                 android:text="화"
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
@@ -703,9 +798,11 @@
                 android:textColor="#ffffff"
                 android:textStyle="bold"
                 android:background="@drawable/cell_shape"
+                android:autoSizeTextType="uniform"
+                android:autoSizePresetSizes="@array/autosize_text_sizes2"
                 android:id="@+id/tuesday8"
                 android:padding="2dp"/>
-            <TextView
+            <com.example.registeration.AutoResizeTextView
                 android:text="수"
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
@@ -714,9 +811,11 @@
                 android:textColor="#ffffff"
                 android:textStyle="bold"
                 android:background="@drawable/cell_shape"
+                android:autoSizeTextType="uniform"
+                android:autoSizePresetSizes="@array/autosize_text_sizes2"
                 android:id="@+id/wednesday8"
                 android:padding="2dp"/>
-            <TextView
+            <com.example.registeration.AutoResizeTextView
                 android:text="목"
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
@@ -725,9 +824,11 @@
                 android:textColor="#ffffff"
                 android:textStyle="bold"
                 android:background="@drawable/cell_shape"
+                android:autoSizeTextType="uniform"
+                android:autoSizePresetSizes="@array/autosize_text_sizes2"
                 android:id="@+id/thursday8"
                 android:padding="2dp"/>
-            <TextView
+            <com.example.registeration.AutoResizeTextView
                 android:text="금"
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
@@ -736,6 +837,8 @@
                 android:textColor="#ffffff"
                 android:textStyle="bold"
                 android:background="@drawable/cell_shape"
+                android:autoSizeTextType="uniform"
+                android:autoSizePresetSizes="@array/autosize_text_sizes2"
                 android:id="@+id/friday8"
                 android:padding="2dp"/>
         </TableRow>
@@ -746,17 +849,18 @@
             android:background="@color/colorPrimaryLight"
             android:layout_weight="1">
 
-            <TextView
+            <com.example.registeration.AutoResizeTextView
                 android:text="6"
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
-                android:background="@color/colorPrimary"
+                android:background="@color/colorPrimaryLight"
                 android:textColor="#ffffff"
                 android:textStyle="bold"
                 android:gravity="right"
-                android:textSize="15dp"
+                android:autoSizeTextType="uniform"
+                android:autoSizePresetSizes="@array/autosize_text_sizes"
                 android:paddingRight="1dp" />
-            <TextView
+            <com.example.registeration.AutoResizeTextView
                 android:text="월"
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
@@ -765,9 +869,11 @@
                 android:textColor="#ffffff"
                 android:textStyle="bold"
                 android:background="@drawable/cell_shape"
+                android:autoSizeTextType="uniform"
+                android:autoSizePresetSizes="@array/autosize_text_sizes2"
                 android:id="@+id/monday9"
                 android:padding="2dp"/>
-            <TextView
+            <com.example.registeration.AutoResizeTextView
                 android:text="화"
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
@@ -776,9 +882,11 @@
                 android:textColor="#ffffff"
                 android:textStyle="bold"
                 android:background="@drawable/cell_shape"
+                android:autoSizeTextType="uniform"
+                android:autoSizePresetSizes="@array/autosize_text_sizes2"
                 android:id="@+id/tuesday9"
                 android:padding="2dp"/>
-            <TextView
+            <com.example.registeration.AutoResizeTextView
                 android:text="수"
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
@@ -787,10 +895,11 @@
                 android:textColor="#ffffff"
                 android:textStyle="bold"
                 android:background="@drawable/cell_shape"
+                android:autoSizeTextType="uniform"
+                android:autoSizePresetSizes="@array/autosize_text_sizes2"
                 android:id="@+id/wednesday9"
-                android:padding="2dp"
-                />
-            <TextView
+                android:padding="2dp"/>
+            <com.example.registeration.AutoResizeTextView
                 android:text="목"
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
@@ -799,9 +908,11 @@
                 android:textColor="#ffffff"
                 android:textStyle="bold"
                 android:background="@drawable/cell_shape"
+                android:autoSizeTextType="uniform"
+                android:autoSizePresetSizes="@array/autosize_text_sizes2"
                 android:id="@+id/thursday9"
                 android:padding="2dp"/>
-            <TextView
+            <com.example.registeration.AutoResizeTextView
                 android:text="금"
                 android:layout_width="24dp"
                 android:layout_height="match_parent"
@@ -810,6 +921,8 @@
                 android:textColor="#ffffff"
                 android:textStyle="bold"
                 android:background="@drawable/cell_shape"
+                android:autoSizeTextType="uniform"
+                android:autoSizePresetSizes="@array/autosize_text_sizes2"
                 android:id="@+id/friday9"
                 android:padding="2dp"/>
         </TableRow>
