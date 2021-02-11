@@ -131,11 +131,11 @@ public class Course {
         this.courseTime = courseTime;
     }
 
-    public Course(int courseID, String courseGrade, String courseTitle, int courseDivide, int coursePersonnel, int courseRival) {
+    public Course(int courseID, String courseTitle, int courseDivide, String courseGrade, int coursePersonnel, int courseRival) {
         this.courseID = courseID;
-        this.courseGrade = courseGrade;
         this.courseTitle = courseTitle;
         this.courseDivide = courseDivide;
+        this.courseGrade = courseGrade;
         this.coursePersonnel = coursePersonnel;
         this.courseRival = courseRival;
     }

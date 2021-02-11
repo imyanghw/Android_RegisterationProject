@@ -15,20 +15,15 @@
   <component name="ChangeListManager">
     <list default="true" id="ec93c4ca-cec2-4bb7-86fc-39a01ebd56d4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/registeration/Schedule.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/registeration/Schedule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/registeration/ScheduleFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/registeration/ScheduleFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_schedule.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_schedule.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_statistics.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_statistics.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/arrays.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/arrays.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/registeration/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/registeration/Course.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/registeration/StatisticsFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/registeration/StatisticsFragment.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[2a08d851013f7ece]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -39,8 +34,8 @@
       <list>
         <option value="valueResourceFile" />
         <option value="resourceFile" />
-        <option value="Class" />
         <option value="layoutResourceFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -65,7 +60,7 @@
     <property name="android.recentlyUsedThemes" value="Theme.AppCompat.NoActionBar" />
     <property name="android.sdk.path" value="$PROJECT_DIR$/../../Android" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable-v24" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../AndroidStudioProjects" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="multi-representation-previewD:/github/AndroidRegisterationProject/app/src/main/java/com/example/registeration/AutoResizeTextView.java_selected" value="Custom views" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.17" />
@@ -170,9 +165,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="317" y="176" key="#PSD/0.0.1600.860/1600.-181.1920.1040@0.0.1600.860" timestamp="1612413201807" />
-    <state x="605" y="146" key="#com.intellij.ide.util.MemberChooser" timestamp="1612444357009">
+    <state x="605" y="146" key="#com.intellij.ide.util.MemberChooser" timestamp="1612924596275">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
+    <state x="605" y="146" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860/1600.-113.1920.1040@0.0.1600.860" timestamp="1612924596275" />
     <state x="605" y="146" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860/1600.-181.1920.1040@0.0.1600.860" timestamp="1612444357009" />
     <state x="530" y="176" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1612784170241">
       <screen x="0" y="0" width="1600" height="860" />
