@@ -1,5 +1,6 @@
 package com.example.registeration;
 
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 
@@ -8,6 +9,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Spinner;
@@ -40,6 +42,8 @@ public class StatisticsFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+
+    private OnFragmentInteractionListener mListener;
 
     public StatisticsFragment() {
         // Required empty public constructor
@@ -76,6 +80,13 @@ public class StatisticsFragment extends Fragment {
     private StatisticsCourseListAdapter adapter;
     private List<Course> courseList;
 
+    private ArrayAdapter rankAdapter;
+    private Spinner rankSpinner;
+
+    private ListView rankListView;
+    private RankListAdapter rankListAdapter;
+    private List<Course> rankList;
+
     @Override
     public void onActivityCreated(Bundle b) {
         super.onActivityCreated(b);
@@ -84,6 +95,120 @@ public class StatisticsFragment extends Fragment {
         adapter = new StatisticsCourseListAdapter(getContext().getApplicationContext(), courseList, this);
         courseListView.setAdapter(adapter);
         new BackgroundTask().execute(); //데이터베이스와 소통되는 부분
+
+        rankSpinner = (Spinner) getView().findViewById(R.id.rankSpinner);
+        rankAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.rank, R.layout.spinner_item);
+        rankSpinner.setAdapter(rankAdapter);
+        rankListView = (ListView) getView().findViewById(R.id.rankListView);
+        rankList = new ArrayList<Course>();
+        rankListAdapter = new RankListAdapter(getContext().getApplicationContext(), rankList,this);
+        rankListView.setAdapter(rankListAdapter);
+        new ByEntire().execute(); //전체에서 강의 순위를 불러옴
+        rankSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if(rankSpinner.getSelectedItem().equals("전체에서"))
+                {
+
+                }
+                else if(rankSpinner.getSelectedItem().equals("우리과에서"))
+                {
+
+                }
+                else if(rankSpinner.getSelectedItem().equals("남자 선호도"))
+                {
+
+                }
+                else if(rankSpinner.getSelectedItem().equals("여자 선호도"))
+                {
+
+                }
+                else if(rankSpinner.getSelectedItem().equals("전공 인기도"))
+                {
+
+                }
+                else if(rankSpinner.getSelectedItem().equals("교양 인기도"))
+                {
+
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+    }
+
+    class ByEntire extends AsyncTask<Void, Void, String>
+    {
+        String target;
+
+        @Override
+        protected void onPreExecute(){
+            try {
+                target = "https://imyang3163.cafe24.com/ByEntire.php";
+            }catch (Exception e){
+                e.printStackTrace();
+            }
+        }
+
+        @Override
+        protected String doInBackground(Void... voids) {
+            try{
+                URL url=new URL(target);
+                HttpURLConnection httpURLConnection = (HttpURLConnection)url.openConnection();
+                InputStream inputStream = httpURLConnection.getInputStream();
+                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
+                String temp;
+                StringBuilder stringBuilder = new StringBuilder();
+                while((temp = bufferedReader.readLine())!=null)
+                {
+                    stringBuilder.append(temp+"\n");
+                }
+                bufferedReader.close();
+                inputStream.close();
+                httpURLConnection.disconnect();
+                return stringBuilder.toString().trim();
+            }catch(Exception e){
+                e.printStackTrace();
+            }
+            return null;
+        }
+
+        @Override
+        public void onProgressUpdate(Void... values){
+            super.onProgressUpdate();
+        }
+
+        @Override
+        public void onPostExecute(String result)
+        {
+            try{
+                JSONObject jsonObject=new JSONObject(result);
+                JSONArray jsonArray = jsonObject.getJSONArray("response");
+                int count = 0;
+                int courseID, courseDivide, coursePersonnel;
+                String courseGrade, courseTitle, courseProfessor, courseTime;
+
+                while(count < jsonArray.length()){
+                    JSONObject object = jsonArray.getJSONObject(count);
+                    courseID = object.getInt("courseID");
+                    courseGrade = object.getString("courseGrade");
+                    courseTitle = object.getString("courseTitle");
+                    courseProfessor = object.getString("courseProfessor");
+                    courseDivide = object.getInt("courseDivide");
+                    coursePersonnel = object.getInt("coursePersonnel");
+                    courseTime = object.getString("courseTime");
+                    rankList.add(new Course(courseID, courseGrade, courseTitle, courseDivide, coursePersonnel, courseProfessor, courseTime));
+                    count++;
+                }
+                rankListAdapter.notifyDataSetChanged();
+            }catch (Exception e){
+                e.printStackTrace();
+            }
+        }
     }
 
     class BackgroundTask extends AsyncTask<Void, Void, String> {
@@ -158,5 +283,33 @@ public class StatisticsFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_statistics, container, false);
+    }
+
+    // TODO: Rename method, update argument and hook method into UI event
+    public void onButtonPressed(Uri uri) {
+        if (mListener != null) {
+            mListener.onFragmentInteraction(uri);
+        }
+    }
+
+    @Override
+    public void onDetach() {
+        super.onDetach();
+        mListener = null;
+    }
+
+    /**
+     * This interface must be implemented by activities that contain this
+     * fragment to allow an interaction in this fragment to be communicated
+     * to the activity and potentially other fragments contained in that
+     * activity.
+     * <p>
+     * See the Android Training lesson <a href=
+     * "http://developer.android.com/training/basics/fragments/communicating.html"
+     * >Communicating with Other Fragments</a> for more information.
+     */
+    public interface OnFragmentInteractionListener {
+        // TODO: Update argument type and name
+        void onFragmentInteraction(Uri uri);
     }
 }

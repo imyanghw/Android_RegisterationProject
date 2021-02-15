@@ -69,7 +69,7 @@ public class StatisticsCourseListAdapter extends BaseAdapter {
         }
         else
         {
-            courseGrade.setText(courseList.get(i).getCourseGrade()+"학년");
+            courseGrade.setText(courseList.get(i).getCourseGrade());
         }
         courseTitle.setText(courseList.get(i).getCourseTitle());
         courseDivide.setText(courseList.get(i).getCourseDivide()+"분반");
@@ -81,9 +81,9 @@ public class StatisticsCourseListAdapter extends BaseAdapter {
         }
         else
         {
-            coursePersonnel.setText("신청 인원 : "+courseList.get(i).getCourseRival()+" / "+courseList.get(i).getCoursePersonnel());
+            coursePersonnel.setText("신청인원 : "+courseList.get(i).getCourseRival() +" / "+courseList.get(i).getCoursePersonnel());
             int rate=((int) (((double)courseList.get(i).getCourseRival() * 100 / courseList.get(i).getCoursePersonnel())+0.5));
-            courseRate.setText("경쟁률 : "+rate+"%");
+            courseRate.setText("경쟁률 : " + rate + "%");
             if(rate<20){
                 courseRate.setTextColor(parent.getResources().getColor(R.color.colorSafe));
             }
@@ -103,6 +103,44 @@ public class StatisticsCourseListAdapter extends BaseAdapter {
             }
         }
         v.setTag(courseList.get(i).getCourseID());
+
+        Button deleteButton = (Button)v.findViewById(R.id.deleteButton);
+        deleteButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Response.Listener<String> responseListener = new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        try {
+                            JSONObject jsonResponse = new JSONObject(response);
+                            boolean success = jsonResponse.getBoolean("success");
+                            if (success) {
+                                AlertDialog.Builder builder = new AlertDialog.Builder(parent.getActivity());
+                                AlertDialog dialog = builder.setMessage("강의가 삭제되었습니다.")
+                                        .setPositiveButton("확인", null)
+                                        .create();
+                                dialog.show();
+                                courseList.remove(i);
+                                notifyDataSetChanged();
+                            } else {
+                                AlertDialog.Builder builder = new AlertDialog.Builder(parent.getActivity());
+                                AlertDialog dialog = builder.setMessage("강의 삭제에 실패했습니다.")
+                                        .setNegativeButton("다시 시도", null)
+                                        .create();
+                                dialog.show();
+                            }
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    }
+                };
+
+                DeleteRequest deleteRequest = new DeleteRequest(userID, courseList.get(i).getCourseID() + "", responseListener);
+                RequestQueue queue = Volley.newRequestQueue(parent.getActivity());
+                queue.add(deleteRequest);
+            }
+        });
+
         return v;
     }
 }
