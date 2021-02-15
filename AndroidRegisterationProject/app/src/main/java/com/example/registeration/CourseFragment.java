@@ -103,7 +103,7 @@ public class CourseFragment extends Fragment {
         yearSpinner = (Spinner)getView().findViewById(R.id.yearSpinner);
         termSpinner = (Spinner)getView().findViewById(R.id.termSpinner);
         areaSpinner = (Spinner)getView().findViewById(R.id.areaSpinner);
-        majorSpinner=(Spinner)getView().findViewById(R.id.majorSpinner);
+        majorSpinner = (Spinner)getView().findViewById(R.id.majorSpinner);
 
         courseUniversityGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
 

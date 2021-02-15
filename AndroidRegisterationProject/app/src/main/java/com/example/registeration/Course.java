@@ -1,20 +1,21 @@
 package com.example.registeration;
 
 public class Course {
-    int courseID; //강의 고유 번호
-    String courseUniversity; //학부 혹은 대학원
-    int courseYear; //해당 년도
-    String courseTerm; //해당학기
-    String courseArea; //강의영역(교양인지 전공인지)
-    String courseMajor; //해당학과
-    String courseGrade; //해당학년
-    String courseTitle; //강의제목
-    int courseDivide; //강의 분반
-    int coursePersonnel; //강의 제한 인원
-    String courseProfessor; //강의 교수
-    String courseTime; //강의 시간대
-    String courseRoom; //강의실
-    int courseRival; //강의 경쟁자 수
+    int courseID;//강의 고유 번호
+    String courseUniversity;//학부 혹은 대학원
+    int courseYear;//해당 년도
+    String courseTerm;//해당학기
+    String courseArea;//강의 영역
+    String courseMajor;//해당학과
+    String courseGrade;//해당학년
+    String courseTitle;//강의제목
+    int courseDivide;//강의 분반
+    int coursePersonnel;//강의 제한 인원
+    String courseProfessor;//강의 교수
+    String courseTime;//강의 시간대
+    String courseRoom;//강의실
+    int courseRival;//강의 경쟁자 수
+
 
     public int getCourseID() {
         return courseID;
@@ -80,7 +81,6 @@ public class Course {
         this.courseTitle = courseTitle;
     }
 
-
     public int getCourseDivide() {
         return courseDivide;
     }
@@ -131,11 +131,11 @@ public class Course {
         this.courseTime = courseTime;
     }
 
-    public Course(int courseID, String courseTitle, int courseDivide, String courseGrade, int coursePersonnel, int courseRival) {
+    public Course(int courseID, String courseGrade, String courseTitle, int courseDivide, int coursePersonnel, int courseRival) {
         this.courseID = courseID;
+        this.courseGrade = courseGrade;
         this.courseTitle = courseTitle;
         this.courseDivide = courseDivide;
-        this.courseGrade = courseGrade;
         this.coursePersonnel = coursePersonnel;
         this.courseRival = courseRival;
     }
@@ -162,5 +162,6 @@ public class Course {
         this.courseProfessor = courseProfessor;
         this.courseTime = courseTime;
         this.courseRoom = courseRoom;
+
     }
 }
