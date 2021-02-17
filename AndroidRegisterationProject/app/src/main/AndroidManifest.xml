@@ -6,15 +6,15 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
+        android:icon="@drawable/logo"
+        android:label="양동이"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Registeration"
         android:usesCleartextTraffic="true">
 
         <activity android:name=".Splashscreen"
-            android:label="@string/app_name">
+            android:label="양동이">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -28,6 +28,8 @@
         </activity>
         <activity android:name=".RegisterActivity" />
         <activity android:name=".MainActivity"></activity>
+        <activity android:name=".Pop"
+            android:theme="@style/Theme.Pop"></activity>
     </application>
 
 </manifest>

@@ -114,7 +114,7 @@ public class StatisticsFragment extends Fragment {
         rankListView.setAdapter(rankListAdapter);
         rankSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+            public void onItemSelected(AdapterView<?> adapterView, View view, int position, long id) {
                 if(rankSpinner.getSelectedItem().equals("전체에서"))
                 {
                     rankList.clear();
@@ -148,7 +148,7 @@ public class StatisticsFragment extends Fragment {
             }
 
             @Override
-            public void onNothingSelected(AdapterView<?> parent) {
+            public void onNothingSelected(AdapterView<?> adapterView) {
 
             }
         });

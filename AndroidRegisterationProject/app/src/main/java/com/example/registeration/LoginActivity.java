@@ -87,6 +87,14 @@ public class LoginActivity extends AppCompatActivity {
                 queue.add(loginRequest); //Volley 라이브러리를 이용해서 실제 서버와 통신을 구현하는 부분
             }
         });//로그인 버튼을 눌렀을 때 이벤트 처리를 해줌
+
+        TextView information=(TextView)findViewById(R.id.information);
+        information.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(LoginActivity.this, Pop.class));
+            }
+        });
     }
 
     @Override
