@@ -10,63 +10,18 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_gravity="center"
-        android:layout_marginTop="10dp">
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="460dp"
-        android:background="#ffffff"
-        android:layout_marginTop="10dp">
-
-        <ListView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/courseListView"
-            android:dividerHeight="10dp"
-            android:padding="5dp">
-        </ListView>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:background="@color/colorPrimaryLight"
-        android:orientation="horizontal"
-        android:layout_gravity="center"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:padding="2dp"
-        android:gravity="center">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="강의 인기 순위 : "
-            android:textColor="#ffffff"
-            android:textStyle="bold"/>
-
-        <Spinner
-            android:entries="@array/rank"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginLeft="10dp"
-            android:id="@+id/rankSpinner"></Spinner>
-
+        android:layout_marginTop="13dp">
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="10dp"
-        android:background="#000000">
-
+        android:background="#ffffff"
+        android:layout_marginTop="10dp">
         <ListView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/rankListView"
+            android:id="@+id/courseListView"
             android:dividerHeight="10dp"
             android:padding="5dp">
         </ListView>

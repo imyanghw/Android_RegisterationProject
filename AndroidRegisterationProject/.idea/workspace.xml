@@ -15,7 +15,13 @@
   <component name="ChangeListManager">
     <list default="true" id="ec93c4ca-cec2-4bb7-86fc-39a01ebd56d4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-v24/developer.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/registeration/RankListAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/registeration/StatisticsFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/registeration/StatisticsFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable-v24/developer.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_statistics.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_statistics.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/rank.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/arrays.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/arrays.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,10 +177,10 @@
     </state>
     <state x="605" y="146" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860/1600.-113.1920.1040@0.0.1600.860" timestamp="1612924596275" />
     <state x="605" y="146" key="#com.intellij.ide.util.MemberChooser/0.0.1600.860/1600.-181.1920.1040@0.0.1600.860" timestamp="1612444357009" />
-    <state x="530" y="176" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1613538073120">
+    <state x="530" y="176" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1613626780115">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="530" y="176" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1600.860/1600.-113.1920.1040@0.0.1600.860" timestamp="1613538073120" />
+    <state x="530" y="176" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1600.860/1600.-113.1920.1040@0.0.1600.860" timestamp="1613626780115" />
     <state x="530" y="176" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1600.860/1600.-181.1920.1040@0.0.1600.860" timestamp="1612784170241" />
     <state x="92" y="92" width="1416" height="676" key="AVDManager" timestamp="1611754228150">
       <screen x="0" y="0" width="1600" height="860" />
@@ -199,10 +205,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="380" y="135" key="AndroidThemeDialog/0.0.1600.860/1600.-181.1920.1040@0.0.1600.860" timestamp="1611587871782" />
-    <state x="580" y="185" key="FileChooserDialogImpl" timestamp="1613436571808">
+    <state x="580" y="185" key="FileChooserDialogImpl" timestamp="1613611654856">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="580" y="185" key="FileChooserDialogImpl/0.0.1600.860/1600.-113.1920.1040@0.0.1600.860" timestamp="1613436571808" />
+    <state x="580" y="185" key="FileChooserDialogImpl/0.0.1600.860/1600.-113.1920.1040@0.0.1600.860" timestamp="1613611654856" />
     <state x="580" y="185" key="FileChooserDialogImpl/0.0.1600.860/1600.-181.1920.1040@0.0.1600.860" timestamp="1612831193584" />
     <state width="1539" height="156" key="GridCell.Tab.0.bottom" timestamp="1613368855517">
       <screen x="0" y="0" width="1600" height="860" />
@@ -228,10 +234,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="346" y="115" key="SettingsEditor/0.0.1600.860/1600.-181.1920.1040@0.0.1600.860" timestamp="1612411547351" />
-    <state x="594" y="207" key="chooseDestDirectoryDialog" timestamp="1613540703768">
+    <state x="594" y="207" key="chooseDestDirectoryDialog" timestamp="1613626788014">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="594" y="207" key="chooseDestDirectoryDialog/0.0.1600.860/1600.-113.1920.1040@0.0.1600.860" timestamp="1613540703768" />
+    <state x="594" y="207" key="chooseDestDirectoryDialog/0.0.1600.860/1600.-113.1920.1040@0.0.1600.860" timestamp="1613626788014" />
     <state x="594" y="207" key="chooseDestDirectoryDialog/0.0.1600.860/1600.-181.1920.1040@0.0.1600.860" timestamp="1612784175271" />
     <state x="0" y="0" width="584" height="860" key="find.popup" timestamp="1612746862384">
       <screen x="0" y="0" width="1600" height="860" />
