@@ -108,6 +108,7 @@
                 android:text=" 어플리케이션 정보"
                 android:textColor="#878686"
                 android:id="@+id/information" />
+
         </LinearLayout>
 
     </LinearLayout>

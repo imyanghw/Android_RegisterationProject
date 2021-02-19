@@ -36,7 +36,7 @@ public class StatisticsCourseListAdapter extends BaseAdapter {
     public StatisticsCourseListAdapter(Context context, List<Course> courseList, Fragment parent) {
         this.context = context;
         this.courseList = courseList;
-        this.parent=parent;
+        this.parent = parent;
     }
 
     @Override
@@ -57,11 +57,11 @@ public class StatisticsCourseListAdapter extends BaseAdapter {
     @Override
     public View getView(final int i, View convertView, ViewGroup viewGroup) {
         View v=View.inflate(context, R.layout.statistics,null);
-        TextView courseGrade=(TextView)v.findViewById(R.id.courseGrade);
-        TextView courseTitle=(TextView)v.findViewById(R.id.courseTitle);
-        TextView courseDivide=(TextView)v.findViewById(R.id.courseDivide);
-        TextView coursePersonnel=(TextView)v.findViewById(R.id.coursePersonnel);
-        TextView courseRate=(TextView)v.findViewById(R.id.courseRate);
+        TextView courseGrade = (TextView)v.findViewById(R.id.courseGrade);
+        TextView courseTitle = (TextView)v.findViewById(R.id.courseTitle);
+        TextView courseDivide = (TextView)v.findViewById(R.id.courseDivide);
+        TextView coursePersonnel = (TextView)v.findViewById(R.id.coursePersonnel);
+        TextView courseRate = (TextView)v.findViewById(R.id.courseRate);
 
         if(courseList.get(i).getCourseGrade().equals("제한 없음")||courseList.get(i).getCourseGrade().equals(""))
         {
@@ -81,19 +81,19 @@ public class StatisticsCourseListAdapter extends BaseAdapter {
         }
         else
         {
-            coursePersonnel.setText("신청인원 : "+courseList.get(i).getCourseRival() +" / "+courseList.get(i).getCoursePersonnel());
-            int rate=((int) (((double)courseList.get(i).getCourseRival() * 100 / courseList.get(i).getCoursePersonnel())+0.5));
+            coursePersonnel.setText("신청인원 : " + courseList.get(i).getCourseRival() + " / " + courseList.get(i).getCoursePersonnel());
+            int rate=((int) (((double)courseList.get(i).getCourseRival() * 100 / courseList.get(i).getCoursePersonnel()) + 0.5));
             courseRate.setText("경쟁률 : " + rate + "%");
-            if(rate<20){
+            if(rate < 20){
                 courseRate.setTextColor(parent.getResources().getColor(R.color.colorSafe));
             }
-            else if(rate<=50){
+            else if(rate <= 50){
                 courseRate.setTextColor(parent.getResources().getColor(R.color.colorPrimary));
             }
-            else if(rate<=100){
+            else if(rate <= 100){
                 courseRate.setTextColor(parent.getResources().getColor(R.color.colorDanger));
             }
-            else if(rate<=150)
+            else if(rate <= 150)
             {
                 courseRate.setTextColor(parent.getResources().getColor(R.color.colorWarning));
             }

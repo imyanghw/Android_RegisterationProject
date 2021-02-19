@@ -88,9 +88,9 @@ public class StatisticsFragment extends Fragment {
     @Override
     public void onActivityCreated(Bundle b){
         super.onActivityCreated(b);
-        courseListView=(ListView)getView().findViewById(R.id.courseListView);
-        courseList=new ArrayList<Course>();
-        adapter=new StatisticsCourseListAdapter(getContext().getApplicationContext(), courseList, this);
+        courseListView = (ListView)getView().findViewById(R.id.courseListView);
+        courseList = new ArrayList<Course>();
+        adapter = new StatisticsCourseListAdapter(getContext().getApplicationContext(), courseList, this);
         courseListView.setAdapter(adapter);
         new BackgroundTask().execute();
 
@@ -112,12 +112,12 @@ public class StatisticsFragment extends Fragment {
         @Override
         protected String doInBackground(Void... voids) {
             try{
-                URL url=new URL(target);
-                HttpURLConnection httpURLConnection=(HttpURLConnection)url.openConnection();
+                URL url = new URL(target);
+                HttpURLConnection httpURLConnection = (HttpURLConnection)url.openConnection();
                 InputStream inputStream=httpURLConnection.getInputStream();
-                BufferedReader bufferedReader=new BufferedReader(new InputStreamReader(inputStream));
+                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
                 String temp;
-                StringBuilder stringBuilder=new StringBuilder();
+                StringBuilder stringBuilder = new StringBuilder();
                 while((temp=bufferedReader.readLine())!=null)
                 {
                     stringBuilder.append(temp+"\n");
@@ -141,19 +141,19 @@ public class StatisticsFragment extends Fragment {
         public void onPostExecute(String result)
         {
             try{
-                JSONObject jsonObject=new JSONObject(result);
-                JSONArray jsonArray=jsonObject.getJSONArray("response");
+                JSONObject jsonObject = new JSONObject(result);
+                JSONArray jsonArray = jsonObject.getJSONArray("response");
                 int count = 0;
                 int courseID, courseDivide, coursePersonnel, courseRival;
                 String courseGrade, courseTitle;
                 while(count<jsonArray.length()){
-                    JSONObject object=jsonArray.getJSONObject(count);
-                    courseID=object.getInt("courseID");
-                    courseGrade=object.getString("courseGrade");
-                    courseTitle=object.getString("courseTitle");
-                    courseDivide=object.getInt("courseDivide");
-                    coursePersonnel=object.getInt("coursePersonnel");
-                    courseRival=object.getInt("COUNT(SCHEDULE.courseID)");
+                    JSONObject object = jsonArray.getJSONObject(count);
+                    courseID = object.getInt("courseID");
+                    courseGrade = object.getString("courseGrade");
+                    courseTitle = object.getString("courseTitle");
+                    courseDivide = object.getInt("courseDivide");
+                    coursePersonnel = object.getInt("coursePersonnel");
+                    courseRival = object.getInt("COUNT(SCHEDULE.courseID)");
 
                     courseList.add(new Course(courseID, courseGrade, courseTitle, courseDivide, coursePersonnel, courseRival));
                     count++;

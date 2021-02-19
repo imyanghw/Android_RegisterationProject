@@ -121,13 +121,13 @@ public class CourseFragment extends Fragment {
                 if(courseUniversity.equals("학부")) {
                     areaAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.universityArea, android.R.layout.simple_spinner_dropdown_item);
                     areaSpinner.setAdapter(areaAdapter);
-                    majorAdapter=ArrayAdapter.createFromResource(getActivity(),R.array.universityRefinementMajor, android.R.layout.simple_spinner_dropdown_item);
+                    majorAdapter = ArrayAdapter.createFromResource(getActivity(),R.array.universityRefinementMajor, android.R.layout.simple_spinner_dropdown_item);
                     majorSpinner.setAdapter(majorAdapter);
                 }
                 else if(courseUniversity.equals("대학원")) {
                     areaAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.graduateArea, android.R.layout.simple_spinner_dropdown_item);
                     areaSpinner.setAdapter(areaAdapter);
-                    majorAdapter=ArrayAdapter.createFromResource(getActivity(),R.array.graduateMajor, android.R.layout.simple_spinner_dropdown_item);
+                    majorAdapter = ArrayAdapter.createFromResource(getActivity(),R.array.graduateMajor, android.R.layout.simple_spinner_dropdown_item);
                     majorSpinner.setAdapter(majorAdapter);
                 }
             }
@@ -138,17 +138,17 @@ public class CourseFragment extends Fragment {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if(areaSpinner.getSelectedItem().equals("교양및기타"))
                 {
-                    majorAdapter=ArrayAdapter.createFromResource(getActivity(),R.array.universityRefinementMajor, android.R.layout.simple_spinner_dropdown_item);
+                    majorAdapter = ArrayAdapter.createFromResource(getActivity(),R.array.universityRefinementMajor, android.R.layout.simple_spinner_dropdown_item);
                     majorSpinner.setAdapter(majorAdapter);
                 }
                 if(areaSpinner.getSelectedItem().equals("전공"))
                 {
-                    majorAdapter=ArrayAdapter.createFromResource(getActivity(),R.array.universityMajor, android.R.layout.simple_spinner_dropdown_item);
+                    majorAdapter = ArrayAdapter.createFromResource(getActivity(),R.array.universityMajor, android.R.layout.simple_spinner_dropdown_item);
                     majorSpinner.setAdapter(majorAdapter);
                 }
                 if(areaSpinner.getSelectedItem().equals("일반대학원"))
                 {
-                    majorAdapter=ArrayAdapter.createFromResource(getActivity(),R.array.graduateMajor, android.R.layout.simple_spinner_dropdown_item);
+                    majorAdapter = ArrayAdapter.createFromResource(getActivity(),R.array.graduateMajor, android.R.layout.simple_spinner_dropdown_item);
                     majorSpinner.setAdapter(majorAdapter);
                 }
             }
@@ -159,13 +159,13 @@ public class CourseFragment extends Fragment {
             }
         });
 
-        courseListView=(ListView)getView().findViewById(R.id.courseListView);
-        courseList=new ArrayList<Course>();
-        adapter=new CourseListAdapter(getContext().getApplicationContext(), courseList, this);
+        courseListView = (ListView)getView().findViewById(R.id.courseListView);
+        courseList = new ArrayList<Course>();
+        adapter = new CourseListAdapter(getContext().getApplicationContext(), courseList, this);
 
         courseListView.setAdapter(adapter);
 
-        Button searchButton=(Button)getView().findViewById(R.id.searchButton);
+        Button searchButton = (Button)getView().findViewById(R.id.searchButton);
         searchButton.setOnClickListener(new View.OnClickListener(){
 
             @Override
@@ -208,14 +208,14 @@ public class CourseFragment extends Fragment {
         protected String doInBackground(Void... voids) {
             try{
                 URL url=new URL(target);
-                HttpURLConnection httpURLConnection=(HttpURLConnection)url.openConnection();
-                InputStream inputStream=httpURLConnection.getInputStream();
-                BufferedReader bufferedReader=new BufferedReader(new InputStreamReader(inputStream));
+                HttpURLConnection httpURLConnection = (HttpURLConnection)url.openConnection();
+                InputStream inputStream = httpURLConnection.getInputStream();
+                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
                 String temp;
-                StringBuilder stringBuilder=new StringBuilder();
+                StringBuilder stringBuilder = new StringBuilder();
                 while((temp=bufferedReader.readLine())!=null)
                 {
-                    stringBuilder.append(temp+"\n");
+                    stringBuilder.append(temp + "\n");
                 }
                 bufferedReader.close();
                 inputStream.close();
@@ -237,8 +237,8 @@ public class CourseFragment extends Fragment {
         {
             try{
                 courseList.clear(); //해당 강의목록을 초기화시켜줌
-                JSONObject jsonObject=new JSONObject(result);
-                JSONArray jsonArray=jsonObject.getJSONArray("response");
+                JSONObject jsonObject = new JSONObject(result);
+                JSONArray jsonArray = jsonObject.getJSONArray("response");
                 int count = 0;
                 int courseID; //강의 고유 번호
                 String courseUniversity; //학부 혹은 대학원
@@ -254,23 +254,23 @@ public class CourseFragment extends Fragment {
                 String courseTime; //강의 시간대
                 String courseRoom; //강의실
 
-                while(count<jsonArray.length()) //모든 배열의 원소를 돌면서 동작을 처리
+                while(count < jsonArray.length()) //모든 배열의 원소를 돌면서 동작을 처리
                 {
-                    JSONObject object=jsonArray.getJSONObject(count);
-                    courseID=object.getInt("courseID");
-                    courseUniversity=object.getString("courseUniversity");
-                    courseYear=object.getInt("courseYear");
-                    courseTerm=object.getString("courseTerm");
-                    courseArea=object.getString("courseArea");
-                    courseMajor=object.getString("courseMajor");
-                    courseGrade=object.getString("courseGrade");
-                    courseTitle=object.getString("courseTitle");
-                    courseDivide=object.getInt("courseDivide");
-                    coursePersonnel=object.getInt("coursePersonnel");
-                    courseProfessor=object.getString("courseProfessor");
-                    courseTime=object.getString("courseTime");
-                    courseRoom=object.getString("courseRoom");
-                    Course course=new Course(courseID, courseUniversity, courseYear, courseTerm, courseArea, courseMajor, courseGrade, courseTitle, courseDivide, coursePersonnel, courseProfessor, courseTime, courseRoom);
+                    JSONObject object = jsonArray.getJSONObject(count);
+                    courseID = object.getInt("courseID");
+                    courseUniversity = object.getString("courseUniversity");
+                    courseYear = object.getInt("courseYear");
+                    courseTerm = object.getString("courseTerm");
+                    courseArea = object.getString("courseArea");
+                    courseMajor = object.getString("courseMajor");
+                    courseGrade = object.getString("courseGrade");
+                    courseTitle = object.getString("courseTitle");
+                    courseDivide = object.getInt("courseDivide");
+                    coursePersonnel = object.getInt("coursePersonnel");
+                    courseProfessor = object.getString("courseProfessor");
+                    courseTime = object.getString("courseTime");
+                    courseRoom = object.getString("courseRoom");
+                    Course course = new Course(courseID, courseUniversity, courseYear, courseTerm, courseArea, courseMajor, courseGrade, courseTitle, courseDivide, coursePersonnel, courseProfessor, courseTime, courseRoom);
                     courseList.add(course);
                     count++;
                 }
@@ -278,7 +278,7 @@ public class CourseFragment extends Fragment {
                 if(count == 0)
                 {
                     AlertDialog dialog;
-                    AlertDialog.Builder builder=new AlertDialog.Builder(CourseFragment.this.getActivity());
+                    AlertDialog.Builder builder = new AlertDialog.Builder(CourseFragment.this.getActivity());
                     dialog = builder.setMessage("조회된 강의가 없습니다.")
                             .setPositiveButton("확인", null)
                             .create();

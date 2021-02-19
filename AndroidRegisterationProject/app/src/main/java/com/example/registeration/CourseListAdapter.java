@@ -95,7 +95,7 @@ public class CourseListAdapter extends BaseAdapter {
 
             v.setTag(courseList.get(i).getCourseID());
 
-            Button addButton=(Button)v.findViewById(R.id.addButton); //addButton 레이아웃을 가져옴
+            Button addButton = (Button)v.findViewById(R.id.addButton); //addButton 레이아웃을 가져옴
             addButton.setOnClickListener(new View.OnClickListener(){
 
                 @Override
@@ -156,8 +156,6 @@ public class CourseListAdapter extends BaseAdapter {
             return v;
         }
 
-
-
     class BackgroundTask extends AsyncTask<Void, Void, String>
     {
         String target;
@@ -175,14 +173,14 @@ public class CourseListAdapter extends BaseAdapter {
         protected String doInBackground(Void... voids) {
             try{
                 URL url=new URL(target);
-                HttpURLConnection httpURLConnection=(HttpURLConnection)url.openConnection();
-                InputStream inputStream=httpURLConnection.getInputStream();
-                BufferedReader bufferedReader=new BufferedReader(new InputStreamReader(inputStream));
+                HttpURLConnection httpURLConnection = (HttpURLConnection)url.openConnection();
+                InputStream inputStream = httpURLConnection.getInputStream();
+                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
                 String temp;
-                StringBuilder stringBuilder=new StringBuilder();
+                StringBuilder stringBuilder = new StringBuilder();
                 while((temp=bufferedReader.readLine())!=null)
                 {
-                    stringBuilder.append(temp+"\n");
+                    stringBuilder.append(temp + "\n");
                 }
                 bufferedReader.close();
                 inputStream.close();
@@ -203,16 +201,16 @@ public class CourseListAdapter extends BaseAdapter {
         public void onPostExecute(String result)
         {
             try{
-                JSONObject jsonObject=new JSONObject(result);
-                JSONArray jsonArray=jsonObject.getJSONArray("response");
-                int count=0;
+                JSONObject jsonObject = new JSONObject(result);
+                JSONArray jsonArray = jsonObject.getJSONArray("response");
+                int count = 0;
                 String courseProfessor, courseTime;
                 int courseID;
-                while(count<jsonArray.length()){
-                    JSONObject object=jsonArray.getJSONObject(count);
-                    courseID=object.getInt("courseID");
-                    courseProfessor=object.getString("courseProfessor");
-                    courseTime=object.getString("courseTime");
+                while(count < jsonArray.length()){
+                    JSONObject object = jsonArray.getJSONObject(count);
+                    courseID = object.getInt("courseID");
+                    courseProfessor = object.getString("courseProfessor");
+                    courseTime = object.getString("courseTime");
                     courseIDList.add(courseID); //현재 해당 사용자가 가지고 있는 모든 시간표 데이터에 있는 강의 ID 값이 담김
                     schedule.addSchedule(courseTime);
                     count++;

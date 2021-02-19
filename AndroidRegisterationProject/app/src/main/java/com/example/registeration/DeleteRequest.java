@@ -13,7 +13,7 @@ public class DeleteRequest extends StringRequest {//회원가입 요청을 보�
 
     public DeleteRequest(String userID, String courseID, Response.Listener<String> listener){
         super(Method.POST, URL, listener, null);
-        parameters =new HashMap<>();
+        parameters = new HashMap<>();
         parameters.put("userID", userID);
         parameters.put("courseID",courseID);
     }

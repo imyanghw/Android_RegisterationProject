@@ -67,12 +67,12 @@ public class ScheduleFragment extends Fragment {
         }
     }
 
-    private AutoResizeTextView monday[]=new AutoResizeTextView[10];
-    private AutoResizeTextView tuesday[]=new AutoResizeTextView[10];
-    private AutoResizeTextView wednesday[]=new AutoResizeTextView[10];
-    private AutoResizeTextView thursday[]=new AutoResizeTextView[10];
-    private AutoResizeTextView friday[]=new AutoResizeTextView[10];
-    private Schedule schedule=new Schedule();
+    private AutoResizeTextView monday[] = new AutoResizeTextView[10];
+    private AutoResizeTextView tuesday[] = new AutoResizeTextView[10];
+    private AutoResizeTextView wednesday[] = new AutoResizeTextView[10];
+    private AutoResizeTextView thursday[] = new AutoResizeTextView[10];
+    private AutoResizeTextView friday[] = new AutoResizeTextView[10];
+    private Schedule schedule = new Schedule();
 
     @Override
     public void onActivityCreated(Bundle b){
@@ -122,16 +122,16 @@ public class ScheduleFragment extends Fragment {
         thursday[8] = (AutoResizeTextView) getView().findViewById(R.id.thursday8);
         thursday[9] = (AutoResizeTextView) getView().findViewById(R.id.thursday9);
 
-        friday[0]=(AutoResizeTextView)getView().findViewById(R.id.friday0);
-        friday[1]=(AutoResizeTextView)getView().findViewById(R.id.friday1);
-        friday[2]=(AutoResizeTextView)getView().findViewById(R.id.friday2);
-        friday[3]=(AutoResizeTextView)getView().findViewById(R.id.friday3);
-        friday[4]=(AutoResizeTextView)getView().findViewById(R.id.friday4);
-        friday[5]=(AutoResizeTextView)getView().findViewById(R.id.friday5);
-        friday[6]=(AutoResizeTextView)getView().findViewById(R.id.friday6);
-        friday[7]=(AutoResizeTextView)getView().findViewById(R.id.friday7);
-        friday[8]=(AutoResizeTextView)getView().findViewById(R.id.friday8);
-        friday[9]=(AutoResizeTextView)getView().findViewById(R.id.friday9);
+        friday[0] = (AutoResizeTextView)getView().findViewById(R.id.friday0);
+        friday[1] = (AutoResizeTextView)getView().findViewById(R.id.friday1);
+        friday[2] = (AutoResizeTextView)getView().findViewById(R.id.friday2);
+        friday[3] = (AutoResizeTextView)getView().findViewById(R.id.friday3);
+        friday[4] = (AutoResizeTextView)getView().findViewById(R.id.friday4);
+        friday[5] = (AutoResizeTextView)getView().findViewById(R.id.friday5);
+        friday[6] = (AutoResizeTextView)getView().findViewById(R.id.friday6);
+        friday[7] = (AutoResizeTextView)getView().findViewById(R.id.friday7);
+        friday[8] = (AutoResizeTextView)getView().findViewById(R.id.friday8);
+        friday[9] = (AutoResizeTextView)getView().findViewById(R.id.friday9);
 
         new BackgroundTask().execute();
     }
@@ -153,14 +153,14 @@ public class ScheduleFragment extends Fragment {
         protected String doInBackground(Void... voids) {
             try{
                 URL url=new URL(target);
-                HttpURLConnection httpURLConnection=(HttpURLConnection)url.openConnection();
-                InputStream inputStream=httpURLConnection.getInputStream();
-                BufferedReader bufferedReader=new BufferedReader(new InputStreamReader(inputStream));
+                HttpURLConnection httpURLConnection = (HttpURLConnection)url.openConnection();
+                InputStream inputStream = httpURLConnection.getInputStream();
+                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
                 String temp;
-                StringBuilder stringBuilder=new StringBuilder();
+                StringBuilder stringBuilder = new StringBuilder();
                 while((temp=bufferedReader.readLine())!=null)
                 {
-                    stringBuilder.append(temp+"\n");
+                    stringBuilder.append(temp + "\n");
                 }
                 bufferedReader.close();
                 inputStream.close();
@@ -183,15 +183,15 @@ public class ScheduleFragment extends Fragment {
             try{
                 JSONObject jsonObject=new JSONObject(result);
                 JSONArray jsonArray=jsonObject.getJSONArray("response");
-                int count=0;
+                int count = 0;
                 String courseProfessor, courseTime, courseTitle;
                 int courseID;
                 while(count<jsonArray.length()){
-                    JSONObject object=jsonArray.getJSONObject(count);
-                    courseID=object.getInt("courseID");
-                    courseProfessor=object.getString("courseProfessor");
-                    courseTime=object.getString("courseTime");
-                    courseTitle=object.getString("courseTitle");
+                    JSONObject object = jsonArray.getJSONObject(count);
+                    courseID = object.getInt("courseID");
+                    courseProfessor = object.getString("courseProfessor");
+                    courseTime = object.getString("courseTime");
+                    courseTitle = object.getString("courseTitle");
                     schedule.addSchedule(courseTime, courseTitle, courseProfessor);
                     count++;
                 }

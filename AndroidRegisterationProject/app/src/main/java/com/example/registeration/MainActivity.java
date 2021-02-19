@@ -138,7 +138,7 @@ public class MainActivity extends AppCompatActivity {
                 JSONObject jsonObject = new JSONObject(result);
                 JSONArray jsonArray = jsonObject.getJSONArray("response"); //response에 공지사항 리스트가 담긴다.
 
-                int count=0;
+                int count = 0;
                 String noticeContent, noticeName, noticeDate;
                 while(count < jsonArray.length()) {
                     JSONObject object = jsonArray.getJSONObject(count); //현재 배열의 원소값 저장
