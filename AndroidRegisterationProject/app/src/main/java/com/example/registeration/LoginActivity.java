@@ -40,7 +40,6 @@ public class LoginActivity extends AppCompatActivity {
         final Button loginButton = (Button) findViewById(R.id.loginButton);
 
         loginButton.setOnClickListener(new View.OnClickListener() {
-
             @Override
             public void onClick(View view) {
                 final String userID = idText.getText().toString();
@@ -88,7 +87,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         });//로그인 버튼을 눌렀을 때 이벤트 처리를 해줌
 
-        TextView information=(TextView)findViewById(R.id.information);
+        TextView information = (TextView)findViewById(R.id.information);
         information.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -102,7 +101,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onStop();
         if(dialog != null) {
             dialog.dismiss();
-            dialog=null;
+            dialog = null;
         }
     } //로그인 이후에 꺼지게되는 창
 }

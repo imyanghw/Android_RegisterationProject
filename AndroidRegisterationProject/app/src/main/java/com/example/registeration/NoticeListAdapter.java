@@ -35,9 +35,9 @@ public class NoticeListAdapter extends BaseAdapter {
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
         View v = View.inflate(context, R.layout.notice, null); //xml 에 씌여져 있는 view 의 정의를 실제 view 객체로 만드는 역할
-        TextView noticeText = (TextView) v.findViewById(R.id.noticeText);
-        TextView nameText = (TextView) v.findViewById(R.id.nameText);
-        TextView dateText = (TextView) v.findViewById(R.id.dateText);
+        TextView noticeText = (TextView)v.findViewById(R.id.noticeText);
+        TextView nameText = (TextView)v.findViewById(R.id.nameText);
+        TextView dateText = (TextView)v.findViewById(R.id.dateText);
 
         noticeText.setText(noticeList.get(i).getNotice()); //현재 리스트에 있는 값으로 넣어줌
         nameText.setText(noticeList.get(i).getName());

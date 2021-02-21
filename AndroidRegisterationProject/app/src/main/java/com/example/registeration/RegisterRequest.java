@@ -25,5 +25,4 @@ public class RegisterRequest extends StringRequest { //회원가입 요청을 �
     public Map<String, String> getParams() {
         return parameters;
     }
-
 }

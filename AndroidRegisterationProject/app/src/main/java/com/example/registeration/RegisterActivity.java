@@ -61,6 +61,7 @@ public class RegisterActivity extends AppCompatActivity {
             }
         });*/
 
+        //회원가입 정보를 받아옴
         final EditText idText = (EditText) findViewById(R.id.idText);
         final EditText passwordText = (EditText) findViewById(R.id.passwordText);
         final EditText emailText = (EditText) findViewById(R.id.emailText);
@@ -76,16 +77,17 @@ public class RegisterActivity extends AppCompatActivity {
                 RadioButton genderButton = (RadioButton)findViewById(i); //현재 선택되어 있는 라디오 버튼을 찾은 다음에
                 userGender = genderButton.getText().toString(); //userGender의 값을 변경
             }
-        }); //라디오 버튼이 클리되었을때에 대한 이벤트 처리
+        }); //라디오 버튼이 클릭되었을때에 대한 이벤트 처리
 
         final Button validateButton = (Button) findViewById(R.id.validateButton); //회원 중복체크 버튼
         validateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String userID = idText.getText().toString();
-                if(validate) {
+                if(validate) { //validate 기본값 false
                     return; //validate가 체크가 이루어진 상황이라면 종료
                 }
+                //아이디가 빈공간이면
                 if(userID.equals("")) { //체크가 되어있지 않은 상태라면(userID값이 아무런내용이 없다면)
                     AlertDialog.Builder builder = new AlertDialog.Builder(RegisterActivity.this);
                     //아이디가 빈공간일때 예외를 처리해 다시 작성하게끔 해줌
@@ -95,6 +97,7 @@ public class RegisterActivity extends AppCompatActivity {
                     dialog.show();
                     return;
                 }
+                //아이디를 정상적으로 넣었을 때 중복체크를 진행함
                 Response.Listener<String> responseListener = new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
@@ -109,7 +112,7 @@ public class RegisterActivity extends AppCompatActivity {
                                         .create();
                                 dialog.show();
                                 idText.setEnabled(false); //아이디 값을 바꿀수 없도록 고정시켜줌
-                                validate= true; //체크가 완료됨
+                                validate = true; //체크가 완료됨
                                 idText.setBackgroundColor(getResources().getColor(R.color.colorGray));
                                 validateButton.setBackgroundColor(getResources().getColor(R.color.colorGray));
                             }
@@ -140,6 +143,7 @@ public class RegisterActivity extends AppCompatActivity {
                 String userPassword = passwordText.getText().toString();
                 String userMajor = mSpinner.getSelectedItem().toString();
                 String userEmail = emailText.getText().toString();
+
                 if(!validate) {
                     AlertDialog.Builder builder = new AlertDialog.Builder(RegisterActivity.this);
                     //아이디가 빈공간일때 예외를 처리해 다시 작성하게끔 해줌
@@ -149,6 +153,7 @@ public class RegisterActivity extends AppCompatActivity {
                     dialog.show();
                     return;
                 } //중복체크가 되어있지 않다면
+
                 if(userID.equals("") || userPassword.equals("")
                         || userMajor.equals("") || userEmail.equals("") || userGender.equals("")) {
                     AlertDialog.Builder builder = new AlertDialog.Builder(RegisterActivity.this);
@@ -159,7 +164,8 @@ public class RegisterActivity extends AppCompatActivity {
                     dialog.show();
                     return;
                 } //하나라도 빈공간이 있다면 정삭적으로 회원가입이 등록될수가 없음
-                //*아무런 오류가 없다면 정상적으로 회원가입을 진행*
+                /*아무런 오류가 없다면 정상적으로 회원가입을 진행*/
+
                 Response.Listener<String> responseListener = new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
@@ -173,7 +179,7 @@ public class RegisterActivity extends AppCompatActivity {
                                         .setPositiveButton("확인", new DialogInterface.OnClickListener() {
                                             @Override
                                             public void onClick(DialogInterface dialog, int which) {
-                                                Intent intent=new Intent(RegisterActivity.this,
+                                                Intent intent = new Intent(RegisterActivity.this,
                                                         LoginActivity.class);
                                                 RegisterActivity.this.startActivity(intent);
                                             } //다이얼로그 메시지 확인을 누르게되면 로그인창으로 이동함
@@ -207,7 +213,7 @@ public class RegisterActivity extends AppCompatActivity {
         super.onStop();
         if(dialog != null) {
             dialog.dismiss();
-            dialog=null;
+            dialog = null;
         }
     } //회원 등록이 이루어진 이후에 꺼지게되는 창
 }

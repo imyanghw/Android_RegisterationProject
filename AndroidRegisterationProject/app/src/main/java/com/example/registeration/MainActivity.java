@@ -45,8 +45,8 @@ public class MainActivity extends AppCompatActivity {
         noticeListView.setAdapter(adapter); //리스트 뷰에 해당 adapter가 매칭이 됨으로써 ListView의 형태로 나타내어줌
 
         final Button courseButton = (Button)findViewById(R.id.courseButton);
-        final Button statisticsButton = (Button)findViewById(R.id.statisticsButton);
         final Button scheduleButton = (Button)findViewById(R.id.scheduleButton);
+        final Button statisticsButton = (Button)findViewById(R.id.statisticsButton);
         final LinearLayout notice = (LinearLayout)findViewById(R.id.notice); //해당 fragment를 눌렀을 때 화면이 바뀌는 부분
 
         courseButton.setOnClickListener(new View.OnClickListener() {
@@ -60,20 +60,6 @@ public class MainActivity extends AppCompatActivity {
                 FragmentManager fragmentManager = getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 fragmentTransaction.replace(R.id.fragment, new CourseFragment());
-                fragmentTransaction.commit();
-            }
-        });
-        statisticsButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                notice.setVisibility(View.GONE); //디폴트값으로 공지사항은 보이지 않도록
-                courseButton.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
-                statisticsButton.setBackgroundColor(getResources().getColor(R.color.colorPrimaryLight));
-                scheduleButton.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
-
-                FragmentManager fragmentManager = getSupportFragmentManager();
-                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.fragment, new StatisticsFragment());
                 fragmentTransaction.commit();
             }
         });
@@ -91,7 +77,20 @@ public class MainActivity extends AppCompatActivity {
                 fragmentTransaction.commit();
             }
         });
+        statisticsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                notice.setVisibility(View.GONE); //디폴트값으로 공지사항은 보이지 않도록
+                courseButton.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+                statisticsButton.setBackgroundColor(getResources().getColor(R.color.colorPrimaryLight));
+                scheduleButton.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
 
+                FragmentManager fragmentManager = getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.fragment, new StatisticsFragment());
+                fragmentTransaction.commit();
+            }
+        });
         new BackgroundTask().execute();
     }
 
