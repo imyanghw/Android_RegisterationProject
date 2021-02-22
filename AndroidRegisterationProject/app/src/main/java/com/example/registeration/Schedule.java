@@ -106,7 +106,7 @@ public class Schedule {
     }
 
     public boolean validate(String scheduleText) {
-        if (scheduleText.equals("")) { //새롭게 추가하려는 수강 신청 날짜의 데이터가 현재 schedule 데이터에 중복되지 않는지 체크           return true;
+        if (scheduleText.equals("")) { //새롭게 추가하려는 수강 신청 날짜의 데이터가 현재 schedule 데이터에 중복되지 않는지 체크
             return true;
         }
         int temp;
@@ -122,7 +122,7 @@ public class Schedule {
                 if (scheduleText.charAt(i) == ']') {
                     endPoint = i;
                     if (!monday[Integer.parseInt(scheduleText.substring(startPoint + 1, endPoint))].equals("")) {
-                        return false;
+                        return false; //공백이 아니라면 어떠한 데이터가 들어가 있다는 소리이기 때문에 해당 시간표는 중복되어서 들어갈 수 없음
                     }
                 }
             }
@@ -140,7 +140,7 @@ public class Schedule {
                 if (scheduleText.charAt(i) == ']') {
                     endPoint = i;
                     if (!tuesday[Integer.parseInt(scheduleText.substring(startPoint + 1, endPoint))].equals("")) {
-                        return false;
+                        return false; //공백이 아니라면 어떠한 데이터가 들어가 있다는 소리이기 때문에 해당 시간표는 중복되어서 들어갈 수 없음
                     }
                 }
             }
@@ -158,7 +158,7 @@ public class Schedule {
                 if (scheduleText.charAt(i) == ']') {
                     endPoint = i;
                     if (!wednesday[Integer.parseInt(scheduleText.substring(startPoint + 1, endPoint))].equals("")) {
-                        return false;
+                        return false; //공백이 아니라면 어떠한 데이터가 들어가 있다는 소리이기 때문에 해당 시간표는 중복되어서 들어갈 수 없음
                     }
                 }
             }
@@ -176,7 +176,7 @@ public class Schedule {
                 if (scheduleText.charAt(i) == ']') {
                     endPoint = i;
                     if (!thursday[Integer.parseInt(scheduleText.substring(startPoint + 1, endPoint))].equals("")) {
-                        return false;
+                        return false; //공백이 아니라면 어떠한 데이터가 들어가 있다는 소리이기 때문에 해당 시간표는 중복되어서 들어갈 수 없음
                     }
                 }
             }

@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT); //스마트폰 화면을 세로로 고정시킴
 
         userID = getIntent().getStringExtra("userID");
 
@@ -107,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
         protected String doInBackground(Void... voids) { //실질적으로 데이터를 얻어올 수 있는 부분
             try {
                 URL url = new URL(target);
-                HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
+                HttpURLConnection httpURLConnection = (HttpURLConnection)url.openConnection();
                 InputStream inputStream = httpURLConnection.getInputStream(); //넘어오는 결과값들을 그대로 저장함
                 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream)); //버퍼에 담아서 읽어옴
 
@@ -118,7 +118,8 @@ public class MainActivity extends AppCompatActivity {
                 }
                 bufferedReader.close();
                 inputStream.close();
-                httpURLConnection.disconnect();;
+                httpURLConnection.disconnect();
+
                 return stringBuilder.toString().trim(); //문자열들을 반환
             } catch(Exception e) {
                 e.printStackTrace();
@@ -136,9 +137,9 @@ public class MainActivity extends AppCompatActivity {
             try {
                 JSONObject jsonObject = new JSONObject(result);
                 JSONArray jsonArray = jsonObject.getJSONArray("response"); //response에 공지사항 리스트가 담긴다.
-
                 int count = 0;
                 String noticeContent, noticeName, noticeDate;
+
                 while(count < jsonArray.length()) {
                     JSONObject object = jsonArray.getJSONObject(count); //현재 배열의 원소값 저장
                     noticeContent = object.getString("noticeContent");
@@ -146,7 +147,7 @@ public class MainActivity extends AppCompatActivity {
                     noticeDate = object.getString("noticeDate");
                     Notice notice = new Notice(noticeContent, noticeName, noticeDate);
                     noticeList.add(notice); //공지사항이 리스트에 추가됨
-                    adapter.notifyDataSetChanged();
+                    adapter.notifyDataSetChanged(); //공지사항 리스트를 실시간으로 갱신
                     count++;
                 }
             } catch(Exception e) {

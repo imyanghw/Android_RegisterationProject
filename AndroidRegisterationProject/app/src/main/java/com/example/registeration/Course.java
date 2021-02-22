@@ -16,7 +16,6 @@ public class Course {
     String courseRoom;//강의실
     int courseRival;//강의 경쟁자 수
 
-
     public int getCourseID() {
         return courseID;
     }

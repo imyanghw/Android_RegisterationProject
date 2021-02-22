@@ -132,6 +132,7 @@ public class CourseFragment extends Fragment {
                 }
             }
         });
+
         areaSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             //학부인지 대학원인지 해당이 교양인지 전공인지 일반대학원인지에 따라 현재 보여줄 수 있는 과가 달라짐
             @Override
@@ -167,7 +168,6 @@ public class CourseFragment extends Fragment {
 
         Button searchButton = (Button)getView().findViewById(R.id.searchButton);
         searchButton.setOnClickListener(new View.OnClickListener(){
-
             @Override
             public void onClick(View v) {
                 new BackgroundTask().execute();

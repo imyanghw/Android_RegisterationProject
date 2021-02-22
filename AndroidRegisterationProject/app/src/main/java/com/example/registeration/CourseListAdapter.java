@@ -71,7 +71,7 @@ public class CourseListAdapter extends BaseAdapter {
             TextView courseProfessor=(TextView)v.findViewById(R.id.courseProfessor);
             TextView courseTime=(TextView)v.findViewById(R.id.courseTime);
 
-            if(courseList.get(i).getCourseGrade().equals("제한 없음")||courseList.get(i).getCourseGrade().equals(""))
+            if(courseList.get(i).getCourseGrade().equals("제한 없음") || courseList.get(i).getCourseGrade().equals(""))
             {
                 courseGrade.setText("모든 학년");
             }
@@ -82,22 +82,21 @@ public class CourseListAdapter extends BaseAdapter {
             courseTitle.setText(courseList.get(i).getCourseTitle());
             courseDivide.setText(courseList.get(i).getCourseDivide()+"분반");
 
-            if(courseList.get(i).getCoursePersonnel()==0)
+            if(courseList.get(i).getCoursePersonnel() == 0)
             {
                 coursePersonnel.setText("인원 제한 없음");
             }
             else
             {
-                coursePersonnel.setText("제한 인원 : "+courseList.get(i).getCoursePersonnel()+"명");
+                coursePersonnel.setText("제한 인원 : " + courseList.get(i).getCoursePersonnel()+"명");
             }
             courseProfessor.setText(courseList.get(i).getCourseProfessor() + "교수");
-            courseTime.setText(courseList.get(i).getCourseTime()+"");
+            courseTime.setText(courseList.get(i).getCourseTime() + "");
 
             v.setTag(courseList.get(i).getCourseID());
 
             Button addButton = (Button)v.findViewById(R.id.addButton); //addButton 레이아웃을 가져옴
             addButton.setOnClickListener(new View.OnClickListener(){
-
                 @Override
                 public void onClick(View v) {
                     boolean validate = false;
@@ -152,7 +151,6 @@ public class CourseListAdapter extends BaseAdapter {
                     }
                 }
             });
-
             return v;
         }
 
@@ -172,13 +170,13 @@ public class CourseListAdapter extends BaseAdapter {
         @Override
         protected String doInBackground(Void... voids) {
             try{
-                URL url=new URL(target);
+                URL url = new URL(target);
                 HttpURLConnection httpURLConnection = (HttpURLConnection)url.openConnection();
                 InputStream inputStream = httpURLConnection.getInputStream();
                 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
                 String temp;
                 StringBuilder stringBuilder = new StringBuilder();
-                while((temp=bufferedReader.readLine())!=null)
+                while((temp = bufferedReader.readLine())!=null)
                 {
                     stringBuilder.append(temp + "\n");
                 }
@@ -224,11 +222,11 @@ public class CourseListAdapter extends BaseAdapter {
         public boolean alreadyIn(List<Integer> courseIDList, int item) { //현재 해당하는 courseID 값이 이미 들어가 있는 상태라면
             for(int i=0; i<courseIDList.size(); i++)
             {
-                if(courseIDList.get(i) == item){
+                if(courseIDList.get(i) == item){ //현재 추가하려는 id값의 원소가 하나라도 존재한다면
                     return false;
                 }
             }
-            return true;
+            return true; //그렇지 않다면 해당 데이터를 추가해주도록
         }
     }
 
