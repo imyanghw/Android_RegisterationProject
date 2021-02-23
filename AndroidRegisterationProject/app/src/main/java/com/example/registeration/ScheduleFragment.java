@@ -144,7 +144,8 @@ public class ScheduleFragment extends Fragment {
         protected void onPreExecute(){
             try {
                 target = "https://imyang3163.cafe24.com/ScheduleList.php?userID=" + URLEncoder.encode(MainActivity.userID, "UTF-8");
-            }catch (Exception e){
+            }
+            catch (Exception e) {
                 e.printStackTrace();
             }
         }
@@ -181,12 +182,12 @@ public class ScheduleFragment extends Fragment {
         public void onPostExecute(String result)
         {
             try{
-                JSONObject jsonObject=new JSONObject(result);
-                JSONArray jsonArray=jsonObject.getJSONArray("response");
+                JSONObject jsonObject = new JSONObject(result);
+                JSONArray jsonArray = jsonObject.getJSONArray("response");
                 int count = 0;
                 String courseProfessor, courseTime, courseTitle;
                 int courseID;
-                while(count<jsonArray.length()){
+                while(count < jsonArray.length()){
                     JSONObject object = jsonArray.getJSONObject(count);
                     courseID = object.getInt("courseID");
                     courseProfessor = object.getString("courseProfessor");

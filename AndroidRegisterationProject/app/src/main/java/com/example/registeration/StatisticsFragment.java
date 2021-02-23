@@ -93,7 +93,6 @@ public class StatisticsFragment extends Fragment {
         adapter = new StatisticsCourseListAdapter(getContext().getApplicationContext(), courseList, this);
         courseListView.setAdapter(adapter);
         new BackgroundTask().execute();
-
     }
 
     class BackgroundTask extends AsyncTask<Void, Void, String>

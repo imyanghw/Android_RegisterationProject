@@ -206,7 +206,8 @@ public class Schedule {
         String professor;
         if (courserProfessor.equals("")) {
             professor = "";
-        } else {
+        }
+        else {
             professor = "";
         }
         int temp;
@@ -294,41 +295,41 @@ public class Schedule {
 
     public void setting(AutoResizeTextView[] monday, AutoResizeTextView[] tuesday, AutoResizeTextView[] wednesday, AutoResizeTextView[] thursday, AutoResizeTextView[] friday, Context context)
     { //해당 강의목록을 보여줄 수 있도록 세팅
-        int maxLength=0;
-        String maxString=""; //TextView에 들어가는 내용중에서 가장 긴 Text를 골라서 넣어줌
+        int maxLength = 0;
+        String maxString = ""; //TextView에 들어가는 내용중에서 가장 긴 Text를 골라서 넣어줌
         for(int i=0; i<10; i++)
         {
-            if(this.monday[i].length()>maxLength){ //현재의 Text가 maxLength보다 길면
+            if(this.monday[i].length() > maxLength) { //현재의 Text가 maxLength보다 길면
                 maxLength = this.monday[i].length();
                 maxString = this.monday[i];
             }
-            if(this.tuesday[i].length()>maxLength){
+            if(this.tuesday[i].length() > maxLength) {
                 maxLength = this.tuesday[i].length();
                 maxString = this.tuesday[i];
             }
-            if(this.wednesday[i].length()>maxLength){
+            if(this.wednesday[i].length() > maxLength) {
                 maxLength = this.wednesday[i].length();
                 maxString = this.wednesday[i];
             }
-            if(this.thursday[i].length()>maxLength){
+            if(this.thursday[i].length() > maxLength) {
                 maxLength = this.thursday[i].length();
                 maxString = this.thursday[i];
             }
-            if(this.friday[i].length()>maxLength){
+            if(this.friday[i].length() > maxLength) {
                 maxLength = this.friday[i].length();
                 maxString = this.friday[i];
             }
         }
 
         for(int i=0; i<10; i++){
-            if(!this.monday[i].equals("")) //특정한 강의가 배열에 들어가있지 않다면
+            if(!this.monday[i].equals("")) //특정한 강의가 해당시간에 이미 들어가 있다면
             {
-                monday[i].setText(this.monday[i]);
+                monday[i].setText(this.monday[i]); //현재 강의를 출력해줌
                 monday[i].setTextColor(context.getResources().getColor(R.color.colorPrimaryLight));
             }
             else
             {
-                monday[i].setText(maxString);
+                monday[i].setText(maxString); //특정한 강의가 비어있다면
             }
 
             if(!this.tuesday[i].equals(""))

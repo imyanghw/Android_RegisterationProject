@@ -31,7 +31,7 @@ public class StatisticsCourseListAdapter extends BaseAdapter {
     private Context context;
     private List<Course> courseList;
     private Fragment parent;
-    private String userID=MainActivity.userID;
+    private String userID = MainActivity.userID;
 
     public StatisticsCourseListAdapter(Context context, List<Course> courseList, Fragment parent) {
         this.context = context;
@@ -74,7 +74,7 @@ public class StatisticsCourseListAdapter extends BaseAdapter {
         courseTitle.setText(courseList.get(i).getCourseTitle());
         courseDivide.setText(courseList.get(i).getCourseDivide()+"분반");
 
-        if(courseList.get(i).getCoursePersonnel()==0)
+        if(courseList.get(i).getCoursePersonnel() == 0)
         {
             coursePersonnel.setText("인원 제한 없음");
             courseRate.setText(""); //인원 제한이 없을 경우 경쟁률도 제한이 없음
@@ -82,8 +82,9 @@ public class StatisticsCourseListAdapter extends BaseAdapter {
         else
         {
             coursePersonnel.setText("신청인원 : " + courseList.get(i).getCourseRival() + " / " + courseList.get(i).getCoursePersonnel());
-            int rate=((int) (((double)courseList.get(i).getCourseRival() * 100 / courseList.get(i).getCoursePersonnel()) + 0.5));
+            int rate=((int)(((double)courseList.get(i).getCourseRival() * 100 / courseList.get(i).getCoursePersonnel()) + 0.5));
             courseRate.setText("경쟁률 : " + rate + "%");
+
             if(rate < 20){
                 courseRate.setTextColor(parent.getResources().getColor(R.color.colorSafe));
             }
@@ -122,7 +123,8 @@ public class StatisticsCourseListAdapter extends BaseAdapter {
                                 dialog.show();
                                 courseList.remove(i);
                                 notifyDataSetChanged();
-                            } else {
+                            }
+                            else {
                                 AlertDialog.Builder builder = new AlertDialog.Builder(parent.getActivity());
                                 AlertDialog dialog = builder.setMessage("강의 삭제에 실패했습니다.")
                                         .setNegativeButton("다시 시도", null)

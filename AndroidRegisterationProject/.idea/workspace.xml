@@ -15,11 +15,11 @@
   <component name="ChangeListManager">
     <list default="true" id="ec93c4ca-cec2-4bb7-86fc-39a01ebd56d4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/registeration/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/registeration/Course.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/registeration/CourseFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/registeration/CourseFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/registeration/CourseListAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/registeration/CourseListAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/registeration/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/registeration/MainActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/registeration/Schedule.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/registeration/Schedule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/registeration/ScheduleFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/registeration/ScheduleFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/registeration/StatisticsCourseListAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/registeration/StatisticsCourseListAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/registeration/StatisticsFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/registeration/StatisticsFragment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/cell_shape.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/cell_shape.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +64,7 @@
     <property name="android.recentlyUsedThemes" value="Theme.AppCompat.NoActionBar" />
     <property name="android.sdk.path" value="$PROJECT_DIR$/../../Android" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable-v24" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../SampleTab2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../SamplePager" />
     <property name="multi-representation-previewD:/github/AndroidRegisterationProject/app/src/main/java/com/example/registeration/AutoResizeTextView.java_selected" value="Custom views" />
     <property name="multi-representation-previewD:/github/AndroidRegisterationProject/app/src/main/java/com/example/registeration/CircleImageView.java_selected" value="Custom views" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -203,10 +203,10 @@
       <screen x="0" y="0" width="1600" height="860" />
     </state>
     <state x="380" y="135" key="AndroidThemeDialog/0.0.1600.860/1600.-181.1920.1040@0.0.1600.860" timestamp="1611587871782" />
-    <state x="580" y="185" key="FileChooserDialogImpl" timestamp="1613955746943">
+    <state x="580" y="185" key="FileChooserDialogImpl" timestamp="1614041977556">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
-    <state x="580" y="185" key="FileChooserDialogImpl/0.0.1600.860/1600.-113.1920.1040@0.0.1600.860" timestamp="1613955746942" />
+    <state x="580" y="185" key="FileChooserDialogImpl/0.0.1600.860/1600.-113.1920.1040@0.0.1600.860" timestamp="1614041977556" />
     <state x="580" y="185" key="FileChooserDialogImpl/0.0.1600.860/1600.-181.1920.1040@0.0.1600.860" timestamp="1612831193584" />
     <state width="1539" height="156" key="GridCell.Tab.0.bottom" timestamp="1613368855517">
       <screen x="0" y="0" width="1600" height="860" />
