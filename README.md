@@ -4,4 +4,5 @@
 ## 개발환경 및 사용버전
 - Android Studio(Java)
 - SdkVersion 29(Android 10.0)
-- 테스팅 환경(Galaxy Note9, Android 10.0)
+- 테스팅 환경(Galaxy Note9)
+- cafe24 웹호스팅 
