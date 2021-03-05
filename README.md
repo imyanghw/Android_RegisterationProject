@@ -1,5 +1,5 @@
 # Android_RegisterationProject
-안드로이드 수강신청 앱 프로젝트
+> 안드로이드 수강신청 앱 프로젝트
 
 ## 개발환경 및 사용버전
 - Android Studio(Java)
