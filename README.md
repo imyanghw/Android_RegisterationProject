@@ -17,8 +17,8 @@
 - 강의 신청인원, 강의 경쟁률을 나타냄   
 
 ## Screenshots
-<img src="https://user-images.githubusercontent.com/76413580/110277326-5e9f4a00-8018-11eb-955d-8fe08a2e284e.jpg" width="22%"></image>
-<img src="https://user-images.githubusercontent.com/76413580/110276953-9d80d000-8017-11eb-833d-93cfdbc630f5.jpg" width="22%"></image>
-<img src="https://user-images.githubusercontent.com/76413580/110276957-9f4a9380-8017-11eb-8144-846c53edf7fe.jpg" width="22%"></image>
-<img src="https://user-images.githubusercontent.com/76413580/110276961-a1aced80-8017-11eb-8ab6-354dade814af.jpg" width="22%"></image>
+<img src="https://user-images.githubusercontent.com/76413580/110277785-54ca1680-8019-11eb-9534-47b54df72ef3.jpg" width="22%"></image>
+<img src="https://user-images.githubusercontent.com/76413580/110277798-58f63400-8019-11eb-945f-8426bbd88b81.jpg" width="22%"></image>
+<img src="https://user-images.githubusercontent.com/76413580/110277804-5abff780-8019-11eb-909d-3339280fac21.jpg" width="22%"></image>
+<img src="https://user-images.githubusercontent.com/76413580/110277808-5c89bb00-8019-11eb-9b6c-6dbbaa06a80f.jpg" width="22%"></image>
 
