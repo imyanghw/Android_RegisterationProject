@@ -17,3 +17,4 @@
 - 강의 신청인원, 강의 경쟁률을 나타냄   
 
 ## Screenshots
+![Screenshot_20210225-120016](https://user-images.githubusercontent.com/76413580/110272003-78d32b00-800c-11eb-8cff-b6214b551ed2.jpg)
