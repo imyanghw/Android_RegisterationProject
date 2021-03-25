@@ -14,7 +14,7 @@
 - 학부, 년도, 학기, 전공에 따른 강의목록 조회
 - 추가한 강의에 대하여 시간표를 나타냄
 - 추가한 강의에 대하여 삭제기능      
-- 강의 신청인원, 강의 경쟁률을 나타냄   
+- 강의 신청인원, 강의 경쟁률을 나타
 
 ## Screenshots
 <img src="https://user-images.githubusercontent.com/76413580/110277785-54ca1680-8019-11eb-9534-47b54df72ef3.jpg" width="22%"></image>
