@@ -16,6 +16,9 @@
 - 추가한 강의에 대하여 삭제기능      
 - 강의 신청인원, 강의 경쟁률을 나타냄
 
+## ERD
+<img src="https://user-images.githubusercontent.com/76413580/112757870-79b51680-9026-11eb-8a08-d3ef321bd8ee.PNG"></image>
+
 ## Screenshots
 <img src="https://user-images.githubusercontent.com/76413580/110277785-54ca1680-8019-11eb-9534-47b54df72ef3.jpg" width="22%"></image>
 <img src="https://user-images.githubusercontent.com/76413580/110277798-58f63400-8019-11eb-945f-8426bbd88b81.jpg" width="22%"></image>
