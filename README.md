@@ -5,7 +5,7 @@
 - Android Studio(Java)
 - SdkVersion 29(Android 10.0)
 - 테스팅 환경(Galaxy Note9)
-- cafe24 웹호스팅 
+- cafe24 
 
 ## 구현내용
 - 로그인/회원가입(아이디중복체크)
