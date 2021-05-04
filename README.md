@@ -32,3 +32,6 @@
 <img src="https://user-images.githubusercontent.com/76413580/110403192-058af100-80c0-11eb-8bbc-100d5b0bfc7b.jpg" width="22%"></image>
 <img src="https://user-images.githubusercontent.com/76413580/110403195-091e7800-80c0-11eb-89a2-a60251591743.jpg" width="22%"></image>
 
+## 프로젝트 고찰
+
+
