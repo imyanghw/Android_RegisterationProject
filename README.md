@@ -33,5 +33,6 @@
 <img src="https://user-images.githubusercontent.com/76413580/110403195-091e7800-80c0-11eb-89a2-a60251591743.jpg" width="22%"></image>
 
 ## 프로젝트 고찰
+Spinner가 데이터베이스에 저장된 ArrayList값을 불러오지 못하고 버전별로 UI가 다르게 나오거나 나타나지 않는 현상이 발생
 
 
