@@ -15,6 +15,7 @@
 - 추가한 강의에 대하여 시간표를 나타냄
 - 추가한 강의에 대하여 삭제기능      
 - 강의 신청인원, 강의 경쟁률을 나타냄 
+- Volley 라이브러리를 사용해 서버와 통신
 
 ## ERD
 <img src="https://user-images.githubusercontent.com/76413580/112757870-79b51680-9026-11eb-8a08-d3ef321bd8ee.PNG"></image>
